@@ -1,0 +1,20 @@
+{
+  "name": "cycles.dk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "deploy": "docker-compose build && docker tag -f cyclesdk_web registry.blackbeard.io/kevinsimper/cyclesdk && docker push registry.blackbeard.io/kevinsimper/cyclesdk"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
