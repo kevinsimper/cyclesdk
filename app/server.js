@@ -1,11 +1,10 @@
-const express = require('express')
-let app = express()
+import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import HelloWorld from './components/HelloWorld'
 
-const PORT = 9000
+let router = express.Router()
 
-app.get('/', (req, res) => res.send(renderToString(<HelloWorld/>)))
+router.get('/', (req, res) => res.send(renderToString(<HelloWorld/>)))
 
-app.listen(PORT, () => console.log('Listening on', PORT))
+export default router
