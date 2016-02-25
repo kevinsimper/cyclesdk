@@ -1,7 +1,8 @@
 var webpack = require('webpack')
 var fs = require('fs')
 var autoprefixer = require('autoprefixer')
-var precss       = require('precss')
+var precss = require('precss')
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 var nodeModules = {}
 fs.readdirSync('node_modules')
@@ -22,6 +23,7 @@ module.exports = {
     path: __dirname + '/dist/',
     publicPath: publicPath,
     filename: 'server.js',
+    library: '[name]',
     libraryTarget : 'commonjs2'
   },
   externals: nodeModules,
@@ -37,7 +39,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        loader: "!css-loader?modules&importLoaders=1!postcss-loader"
+        loader: ExtractTextPlugin.extract("style",["css-loader?modules&importLoaders=1","postcss-loader"])
       },
       { test:  /\.json$/, loader: 'json-loader' },
       {
@@ -52,8 +54,7 @@ module.exports = {
   },
   plugins: [
     new webpack.NormalModuleReplacementPlugin(/\.(woff|eot|woff2|ttf)$/, 'node-noop'),
-    new webpack.BannerPlugin('require("source-map-support").install();',
-                             { raw: true, entryOnly: false })
+    new ExtractTextPlugin("styles.css")
   ],
   devtool: 'sourcemap',
   node: {
