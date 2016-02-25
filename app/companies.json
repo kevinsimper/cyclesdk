@@ -1,0 +1,96 @@
+{
+  "companies": [
+    {
+      "name": "Memory Tours",
+      "url": "http://memorytours.dk"
+    },
+    {
+      "name": "Ruby Rejser",
+      "url": "http://www.ruby-rejser.dk"
+    },
+    {
+      "name": "Merlot Tours",
+      "url": "http://www.merlottours.dk"
+    },
+    {
+      "name": "Topas Travel",
+      "url": "http://www.topas.dk"
+    },
+    {
+      "name": "Stigs Cykelrejser",
+      "url": "http://www.cykelstig.dk"
+    },
+    {
+      "name": "Papuga Cykelrejser",
+      "url": "http://www.papugacykelrejser.dk"
+    },
+    {
+      "name": "Dan Frost Cykelrejser",
+      "url": "http://dan-frost.dk"
+    },
+    {
+      "name": "Spies Rejser",
+      "url": "http://www.spies.dk"
+    },
+    {
+      "name": "Velo Tours",
+      "url": "http://www.velotours.dk"
+    },
+    {
+      "name": "Ørslev Rejser",
+      "url": "http://www.orslev.dk/Default.aspx?ID=2955"
+    },
+    {
+      "name": "DANcycling",
+      "url": "http://www.dancycling.dk"
+    },
+    {
+      "name": "Mont Ventoux Cykelrejser",
+      "url": "http://montventoux.dk"
+    },
+    {
+      "name": "PP CyclingTours",
+      "url": "http://www.ppcyclingtours.dk"
+    },
+    {
+      "name": "Tema Rejser",
+      "url": "http://www.temarejser.dk"
+    },
+    {
+      "name": "Sci-Cykelrejser",
+      "url": "http://sci-cykelrejser.dk"
+    },
+    {
+      "name": "Jysk Rejsebureau",
+      "url": "http://www.jysk-rejsebureau.dk"
+    },
+    {
+      "name": "Bravo Tours",
+      "url": "http://www.bravotours.dk"
+    },
+    {
+      "name": "Mountain Adventures",
+      "url": "http://www.mountain-adventures.dk"
+    },
+    {
+      "name": "Profil Rejser",
+      "url": "http://www.profil-rejser.dk"
+    },
+    {
+      "name": "Jeresferie. dk",
+      "url": "http://www.jeresferie.dk/index.html"
+    },
+    {
+      "name": "Gislev Rejser",
+      "url": "http://www.gislev-rejser.dk"
+    },
+    {
+      "name": "BornholmTours",
+      "url": "http://www.bornholmtours.com/ferie"
+    },
+    {
+      "name": "MTB Tours",
+      "url": "http://mtb-tours.dk"
+    }
+  ]
+}

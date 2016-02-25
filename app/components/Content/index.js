@@ -5,7 +5,7 @@ export default class Content extends Component {
   render() {
     return (
       <div className={styles.Content}>
-        Content
+        {this.props.children}
       </div>
     )
   }
