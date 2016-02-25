@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
 
-console.log(styles)
-
 export default class Layout extends Component {
   render() {
     return (

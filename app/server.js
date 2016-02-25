@@ -1,15 +1,15 @@
 import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import HelloWorld from './components/HelloWorld'
 import Layout from './components/Layout'
+import Header from './components/Header'
 
 let router = express.Router()
 
 router.get('/', (req, res) => {
   let html = (
     <Layout>
-      <HelloWorld/>
+      <Header/>
     </Layout>
   )
   res.send(renderToString(html))
