@@ -104,6 +104,11 @@
       "name": "MTB Tours",
       "url": "http://mtb-tours.dk",
       "logo": "mtbtours.png"
+    },
+    {
+      "name": "Ghisallo",
+      "url": "http://ghisallo.dk/",
+      "logo": "ghisallo.png"
     }
   ]
 }
