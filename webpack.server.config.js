@@ -14,7 +14,7 @@ fs.readdirSync('node_modules')
   })
 
 var production = process.env.NODE_ENV === 'production'
-var publicPath = (production) ? '/build/' : 'http://localhost:8080/build/'
+var publicPath = '/'
 
 module.exports = {
   entry: './app/server.js',

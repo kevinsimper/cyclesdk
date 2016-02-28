@@ -2,95 +2,108 @@
   "companies": [
     {
       "name": "Memory Tours",
-      "url": "http://memorytours.dk"
+      "url": "http://memorytours.dk",
+      "logo": "memorytours.png"
     },
     {
       "name": "Ruby Rejser",
-      "url": "http://www.ruby-rejser.dk"
+      "url": "http://www.ruby-rejser.dk",
+      "logo": "rubyrejser.png"
     },
     {
       "name": "Merlot Tours",
-      "url": "http://www.merlottours.dk"
+      "url": "http://www.merlottours.dk",
+      "logo": "merlot.png"
     },
     {
       "name": "Topas Travel",
-      "url": "http://www.topas.dk"
+      "url": "http://www.topas.dk",
+      "logo": "topas.png"
     },
     {
       "name": "Stigs Cykelrejser",
-      "url": "http://www.cykelstig.dk"
+      "url": "http://www.cykelstig.dk",
+      "logo": "cykelstig.png"
     },
     {
       "name": "Papuga Cykelrejser",
-      "url": "http://www.papugacykelrejser.dk"
+      "url": "http://www.papugacykelrejser.dk",
+      "logo": "papuga.png"
     },
     {
       "name": "Dan Frost Cykelrejser",
-      "url": "http://dan-frost.dk"
+      "url": "http://dan-frost.dk",
+      "logo": "danfrost.png"
     },
     {
       "name": "Spies Rejser",
-      "url": "http://www.spies.dk"
+      "url": "http://www.spies.dk",
+      "logo": "spies.png"
     },
     {
       "name": "Velo Tours",
-      "url": "http://www.velotours.dk"
+      "url": "http://www.velotours.dk",
+      "logo": "rubyrejser.png"
     },
     {
       "name": "Ørslev Rejser",
-      "url": "http://www.orslev.dk/Default.aspx?ID=2955"
+      "url": "http://www.orslev.dk/Rejser/Cykelrejser%20og%20cykelevents.aspx",
+      "logo": "orslev.png"
     },
     {
       "name": "DANcycling",
-      "url": "http://www.dancycling.dk"
+      "url": "http://www.dancycling.dk",
+      "logo": "dancycling.png"
     },
     {
       "name": "Mont Ventoux Cykelrejser",
-      "url": "http://montventoux.dk"
+      "url": "http://montventoux.dk",
+      "logo": "montventoux.png"
     },
     {
       "name": "PP CyclingTours",
-      "url": "http://www.ppcyclingtours.dk"
+      "url": "http://www.ppcyclingtours.dk",
+      "logo": "ppcyclingtours.jpg"
     },
     {
       "name": "Tema Rejser",
-      "url": "http://www.temarejser.dk"
+      "url": "http://www.temarejser.dk",
+      "logo": "temarejser.png"
     },
     {
       "name": "Sci-Cykelrejser",
-      "url": "http://sci-cykelrejser.dk"
+      "url": "http://sci-cykelrejser.dk",
+      "logo": "scicykelrejser.png"
     },
     {
       "name": "Jysk Rejsebureau",
-      "url": "http://www.jysk-rejsebureau.dk"
+      "url": "http://www.jysk-rejsebureau.dk",
+      "logo": "jyskrejse.png"
     },
     {
       "name": "Bravo Tours",
-      "url": "http://www.bravotours.dk"
+      "url": "http://www.bravotours.dk",
+      "logo": "bravotours.jpg"
     },
     {
       "name": "Mountain Adventures",
-      "url": "http://www.mountain-adventures.dk"
+      "url": "http://www.mountain-adventures.dk",
+      "logo": "mountain-adventures.png"
     },
     {
       "name": "Profil Rejser",
-      "url": "http://www.profil-rejser.dk"
-    },
-    {
-      "name": "Jeresferie. dk",
-      "url": "http://www.jeresferie.dk/index.html"
+      "url": "http://www.profil-rejser.dk",
+      "logo": "profilrejser.png"
     },
     {
       "name": "Gislev Rejser",
-      "url": "http://www.gislev-rejser.dk"
-    },
-    {
-      "name": "BornholmTours",
-      "url": "http://www.bornholmtours.com/ferie"
+      "url": "http://www.gislev-rejser.dk",
+      "logo": "gislev.png"
     },
     {
       "name": "MTB Tours",
-      "url": "http://mtb-tours.dk"
+      "url": "http://mtb-tours.dk",
+      "logo": "mtbtours.png"
     }
   ]
 }

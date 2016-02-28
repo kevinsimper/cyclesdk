@@ -14,8 +14,12 @@ export default class Companies extends Component {
         </thead>
         <tbody>
           {this.props.companies.map(company => {
+            var image = require('./Logos/' + company.logo)
             return (
               <tr>
+                <td>
+                  <div className={styles.Logo}><img src={image}/></div>
+                </td>
                 <td>{company.name}</td>
                 <td><a href={company.url}>{company.url}</a></td>
                 <td>
