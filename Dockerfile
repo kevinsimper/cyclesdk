@@ -12,4 +12,4 @@ ADD . /app
 
 RUN npm rebuild && npm run build
 
-CMD node server
+CMD npm start
