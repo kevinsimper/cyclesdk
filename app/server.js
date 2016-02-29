@@ -1,6 +1,6 @@
 import express from 'express'
 import React from 'react'
-import { renderToString } from 'react-dom/server'
+import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import Layout from './components/Layout'
 import Header from './components/Header'
 import Content from './components/Content'
@@ -15,14 +15,16 @@ let router = express.Router()
 router.get('/', (req, res) => {
   let html = (
     <Layout>
-      <Header/>
-      <HelloWorld/>
-      <Content>
-        <Companies companies={CompaniesData.companies}/>
-      </Content>
+      <div>
+        <Header/>
+        <HelloWorld/>
+        <Content>
+          <Companies companies={CompaniesData.companies}/>
+        </Content>
+      </div>
     </Layout>
   )
-  res.send(renderToString(html))
+  res.send(renderToStaticMarkup(html))
 })
 
 router.get('/countries', (req, res) => {

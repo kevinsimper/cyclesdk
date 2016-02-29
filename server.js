@@ -1,12 +1,24 @@
 "use strict"
 let express = require('express')
+let webpack = require('webpack')
 let app = express()
+
+if(process.env.NODE_ENV !== 'production') {
+  let config = require('./webpack.client.config')
+  let compiler = webpack(config)
+
+  app.use(require("webpack-dev-middleware")(compiler, {
+    noInfo: true, publicPath: config.output.publicPath
+  }))
+  app.use(require("webpack-hot-middleware")(compiler))
+}
+
 
 app.use(function(req, res, next) {
   require('./dist/server').default(req, res, next)
 })
 
-app.use(express.static('dist', { maxAge: 86400000 }));
+app.use(express.static('public', { maxAge: 86400000 }));
 
 var chokidar = require('chokidar')
 var watcher = chokidar.watch('./dist')
