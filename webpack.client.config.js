@@ -10,10 +10,21 @@ var path = __dirname + '/public/build/'
 var jsName = (production) ? '[name]-bundle-[hash].js' : 'bundle.js'
 var cssName = (production) ? '[name]-bundle-[hash].css' : '[name].css'
 
-var plugins = [
-  new ExtractTextPlugin(cssName),
-  new webpack.HotModuleReplacementPlugin()
+var entry = [
+  './app/client.js'
 ]
+var plugins = [
+  new ExtractTextPlugin(cssName)
+]
+
+if(!production) {
+  entry.push(
+    'webpack-hot-middleware/client'
+  )
+  plugins.push(
+    new webpack.HotModuleReplacementPlugin()
+  )
+}
 
 if(production) {
   plugins.push(
@@ -34,7 +45,6 @@ if(production) {
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client',
     './app/client.js'
   ],
   output: {
