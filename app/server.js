@@ -8,6 +8,7 @@ import Companies from './components/Companies'
 import CompaniesData from './companies.json'
 import Countries from './components/Countries'
 import CountriesData from './countries.json'
+import HelloWorld from './components/HelloWorld'
 
 let router = express.Router()
 
@@ -15,6 +16,7 @@ router.get('/', (req, res) => {
   let html = (
     <Layout>
       <Header/>
+      <HelloWorld/>
       <Content>
         <Companies companies={CompaniesData.companies}/>
       </Content>
