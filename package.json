@@ -7,8 +7,9 @@
     "watch": "webpack -w --config webpack.server.config.js",
     "test": "echo \"Error: no test specified\" && exit 0",
     "deploy": "docker-compose build && docker tag -f cyclesdk_web registry.blackbeard.io/kevinsimper/cyclesdk && docker push registry.blackbeard.io/kevinsimper/cyclesdk",
+    "compile-client": "NODE_ENV=production webpack --progress --config webpack.client.config.js",
     "compile-server": "NODE_ENV=production webpack --progress --config webpack.server.config.js",
-    "build": "npm run compile-server"
+    "build": "npm run compile-client && npm run compile-server"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +44,7 @@
   "dependencies": {
     "compression": "^1.6.1",
     "express": "^4.13.4",
+    "lodash": "^4.5.1",
     "material-ui": "^0.14.4",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
