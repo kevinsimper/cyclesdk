@@ -15,6 +15,21 @@ fs.readdirSync('node_modules')
 var production = process.env.NODE_ENV === 'production'
 var publicPath = '/build/'
 
+var plugins = [
+  new webpack.NormalModuleReplacementPlugin(/\.(woff|eot|woff2|ttf)$/, 'node-noop'),
+]
+if(production) {
+  plugins.push(
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false
+      }
+    })
+  )
+}
+
 module.exports = {
   entry: './app/server.js',
   target: 'node',
@@ -52,9 +67,7 @@ module.exports = {
       { test: /\.md$/, loader: "html!markdown" }
     ]
   },
-  plugins: [
-    new webpack.NormalModuleReplacementPlugin(/\.(woff|eot|woff2|ttf)$/, 'node-noop'),
-  ],
+  plugins: plugins,
   devtool: 'sourcemap',
   node: {
     __dirname: true,
