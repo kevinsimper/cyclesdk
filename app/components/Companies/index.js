@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import RaisedButton from 'material-ui/lib/raised-button'
+import Button from '../Button'
 import styles from './style.scss'
 
 export default class Companies extends Component {
@@ -23,7 +23,7 @@ export default class Companies extends Component {
                 <td>{company.name}</td>
                 <td><a href={company.url}>{company.url}</a></td>
                 <td>
-                  <RaisedButton label="Besøg" primary={true} linkButton={true} href={company.url}/>
+                  <Button href={company.url}>Besøg</Button>
                 </td>
               </tr>
             )

@@ -1,0 +1,10 @@
+.Button {
+  background-color: #1e90ff;
+  padding: 10px;
+  margin: 2px;
+  color: #FFF;
+  text-decoration: none;
+  &:hover {
+    background-color: darken(#1e90ff, 10%)
+  }
+}
