@@ -14,7 +14,7 @@ fs.readdirSync('node_modules')
   })
 
 var production = process.env.NODE_ENV === 'production'
-var publicPath = '/'
+var publicPath = '/build/'
 
 module.exports = {
   entry: './app/server.js',
@@ -36,7 +36,11 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        loader: ExtractTextPlugin.extract("style",["css-loader?modules&importLoaders=1","postcss-loader"])
+        loaders: [
+          "isomorphic-style-loader",
+          "css-loader?modules&importLoaders=1",
+          "postcss-loader"
+        ]
       },
       { test:  /\.json$/, loader: 'json-loader' },
       {
@@ -51,7 +55,6 @@ module.exports = {
   },
   plugins: [
     new webpack.NormalModuleReplacementPlugin(/\.(woff|eot|woff2|ttf)$/, 'node-noop'),
-    new ExtractTextPlugin("styles.css")
   ],
   devtool: 'sourcemap',
   node: {

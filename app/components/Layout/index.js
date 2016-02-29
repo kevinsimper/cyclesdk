@@ -20,7 +20,7 @@ export default class Layout extends Component {
       <html>
         <head>
           <title>Cycles.dk</title>
-          <link rel='stylesheet' href='/styles.css'/>
+          <link rel='stylesheet' href='/build/main.css'/>
           <script dangerouslySetInnerHTML={this.getAnalytics()}></script>
         </head>
         <body>
