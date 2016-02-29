@@ -7,6 +7,7 @@ app.use(function(req, res, next) {
 })
 
 app.use(express.static('dist', { maxAge: 86400000 }));
+app.use(express.static('public', { maxAge: 86400000 }));
 
 var chokidar = require('chokidar')
 var watcher = chokidar.watch('./dist')

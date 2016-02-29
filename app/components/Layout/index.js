@@ -24,9 +24,10 @@ export default class Layout extends Component {
           <script dangerouslySetInnerHTML={this.getAnalytics()}></script>
         </head>
         <body>
-          <div className={styles.wrapper}>
+          <div className={styles.wrapper} id='wrapper'>
             {this.props.children}
           </div>
+          <script src='/build/bundle.js'></script>
         </body>
       </html>
     )
