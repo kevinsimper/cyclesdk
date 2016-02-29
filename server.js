@@ -11,6 +11,18 @@ if(process.env.NODE_ENV !== 'production') {
     noInfo: true, publicPath: config.output.publicPath
   }))
   app.use(require("webpack-hot-middleware")(compiler))
+
+  var chokidar = require('chokidar')
+  var watcher = chokidar.watch('./dist')
+
+  watcher.on('ready', function() {
+    watcher.on('all', function() {
+      console.log("Clearing /dist/ module cache from server")
+      Object.keys(require.cache).forEach(function(id) {
+        if (/[\/\\]dist[\/\\]/.test(id)) delete require.cache[id]
+      })
+    })
+  })
 }
 
 
@@ -18,19 +30,7 @@ app.use(function(req, res, next) {
   require('./dist/server').default(req, res, next)
 })
 
-app.use(express.static('public', { maxAge: 86400000 }));
-
-var chokidar = require('chokidar')
-var watcher = chokidar.watch('./dist')
-
-watcher.on('ready', function() {
-  watcher.on('all', function() {
-    console.log("Clearing /dist/ module cache from server")
-    Object.keys(require.cache).forEach(function(id) {
-      if (/[\/\\]dist[\/\\]/.test(id)) delete require.cache[id];
-    });
-  });
-});
+app.use(express.static('public', { maxAge: 86400000 }))
 
 const PORT = 9000
 app.listen(PORT, () => console.log('Listening on', PORT))
