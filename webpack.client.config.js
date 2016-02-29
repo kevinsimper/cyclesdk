@@ -1,6 +1,8 @@
 var webpack = require('webpack')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
-var AssetsPlugin = require('assets-webpack-plugin');
+var AssetsPlugin = require('assets-webpack-plugin')
+var autoprefixer = require('autoprefixer')
+var precss = require('precss')
 
 var production = process.env.NODE_ENV === 'production'
 var publicPath = '/build/'
@@ -82,5 +84,8 @@ module.exports = {
     ]
   },
   plugins: plugins,
-  devtool: 'source-map'
+  devtool: 'source-map',
+  postcss: function () {
+    return [autoprefixer, precss]
+  }
 }

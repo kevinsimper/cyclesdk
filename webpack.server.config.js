@@ -2,7 +2,6 @@ var webpack = require('webpack')
 var fs = require('fs')
 var autoprefixer = require('autoprefixer')
 var precss = require('precss')
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 var nodeModules = {}
 fs.readdirSync('node_modules')

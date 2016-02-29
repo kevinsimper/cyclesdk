@@ -29,6 +29,7 @@
     "file-loader": "^0.8.5",
     "ignore-file-loader": "^1.0.0",
     "image-webpack-loader": "^1.6.3",
+    "isomorphic-style-loader": "0.0.10",
     "json-loader": "^0.5.4",
     "postcss-loader": "^0.8.1",
     "precss": "^1.4.0",
