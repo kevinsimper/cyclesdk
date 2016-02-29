@@ -1,22 +1,45 @@
 import React, { Component } from 'react'
 import Button from '../Button'
 import styles from './style.scss'
+import { sortBy } from 'lodash'
 
 export default class Companies extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      sort: 'name',
+      inverse: false
+    }
+  }
+  getCompanies() {
+    var sorted = sortBy(this.props.companies, 'name')
+    if(this.state.inverse) {
+      sorted.reverse()
+    }
+    return sorted
+  }
+  sortBy(item) {
+    this.setState({
+      sort: item,
+      inverse: !this.state.inverse
+    })
+  }
   render() {
     return (
       <table className={styles.Table}>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Logo</th>
+            <th onClick={this.sortBy.bind(this, 'name')}>Name</th>
             <th>Link</th>
           </tr>
         </thead>
         <tbody>
-          {this.props.companies.map(company => {
+          {this.getCompanies().map((company, key) => {
             var image = require('./Logos/' + company.logo)
             return (
-              <tr>
+              <tr key={key}>
                 <td>
                   <div className={styles.Logo}><img src={image}/></div>
                 </td>
