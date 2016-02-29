@@ -11,10 +11,18 @@ import CountriesData from './countries.json'
 import HelloWorld from './components/HelloWorld'
 
 let router = express.Router()
+let production = process.env.NODE_ENV === 'production'
+let defaultAssets = {
+  main: {
+    js: '/build/bundle.js',
+    css: '/build/main.css'
+  }
+}
+let assets = (production) ? require(__dirname + '/../public/build/webpack.assets.json') : defaultAssets
 
 router.get('/', (req, res) => {
   let html = (
-    <Layout>
+    <Layout assets={assets}>
       <div>
         <Header/>
         <HelloWorld/>
@@ -24,7 +32,8 @@ router.get('/', (req, res) => {
       </div>
     </Layout>
   )
-  res.send(renderToStaticMarkup(html))
+  let output = renderToStaticMarkup(html)
+  res.send(output)
 })
 
 router.get('/countries', (req, res) => {
