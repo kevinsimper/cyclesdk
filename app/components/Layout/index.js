@@ -20,14 +20,14 @@ export default class Layout extends Component {
       <html>
         <head>
           <title>Cycles.dk</title>
-          <link rel='stylesheet' href='/build/main.css'/>
+          <link rel='stylesheet' href={this.props.assets.main.css}/>
           <script dangerouslySetInnerHTML={this.getAnalytics()}></script>
         </head>
         <body>
           <div className={styles.wrapper} id='wrapper'>
             {this.props.children}
           </div>
-          <script src='/build/bundle.js'></script>
+          <script src={this.props.assets.main.js}></script>
         </body>
       </html>
     )
