@@ -3,13 +3,14 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var AssetsPlugin = require('assets-webpack-plugin');
 
 var production = process.env.NODE_ENV === 'production'
-var publicPath = '/'
+var publicPath = '/build/'
 var path = __dirname + '/public/build/'
 var jsName = (production) ? '[name]-bundle-[hash].js' : 'bundle.js'
 var cssName = (production) ? '[name]-bundle-[hash].css' : '[name].css'
 
 var plugins = [
   new ExtractTextPlugin(cssName),
+  new webpack.HotModuleReplacementPlugin()
 ]
 
 if(production) {
@@ -30,7 +31,10 @@ if(production) {
 }
 
 module.exports = {
-  entry: './app/client.js',
+  entry: [
+    'webpack-hot-middleware/client',
+    './app/client.js'
+  ],
   output: {
     path: path,
     publicPath: publicPath,
@@ -41,9 +45,22 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel', // 'babel-loader' is also a legal name to reference
+        loader: 'babel',
         query: {
-          presets: ['react', 'es2015']
+          env: {
+            development: {
+              presets: ["react-hmre"],
+              plugins: [
+                ["react-transform", {
+                  transforms: [{
+                    transform: "react-transform-hmr",
+                    imports: ["react"],
+                    locals: ["module"]
+                  }]
+                }]
+              ]
+            }
+          }
         }
       },
       { test:  /\.json$/, loader: 'json-loader' },
