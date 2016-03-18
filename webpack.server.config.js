@@ -17,6 +17,8 @@ var publicPath = '/build/'
 
 var plugins = [
   new webpack.NormalModuleReplacementPlugin(/\.(woff|eot|woff2|ttf)$/, 'node-noop'),
+  new webpack.BannerPlugin('require("source-map-support").install();',
+  { raw: true, entryOnly: false })
 ]
 if(production) {
   plugins.push(

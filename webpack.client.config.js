@@ -44,9 +44,7 @@ if(production) {
 }
 
 module.exports = {
-  entry: [
-    './app/client.js'
-  ],
+  entry: entry,
   output: {
     path: path,
     publicPath: publicPath,
