@@ -1,23 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Layout from './components/Layout'
-import Header from './components/Header'
-import Content from './components/Content'
-import Companies from './components/Companies'
-import CompaniesData from './companies.json'
-import Countries from './components/Countries'
-import CountriesData from './countries.json'
-import HelloWorld from './components/HelloWorld'
+import routes from './routes'
+import { Router, browserHistory } from 'react-router'
 
-
-let html = (
-  <div>
-    <Header/>
-    <HelloWorld/>
-    <Content>
-      <Companies companies={CompaniesData.companies}/>
-    </Content>
-  </div>
+let app = (
+  <Router history={browserHistory}>
+    {routes}
+  </Router>
 )
 
-render(html, document.querySelector('#wrapper'))
+render(app, document.querySelector('#wrapper'))

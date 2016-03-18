@@ -3,7 +3,8 @@ let express = require('express')
 let webpack = require('webpack')
 let app = express()
 
-if(process.env.NODE_ENV !== 'production') {
+let production = process.env.NODE_ENV === 'production'
+if(!production) {
   let config = require('./webpack.client.config')
   let compiler = webpack(config)
 
@@ -25,12 +26,24 @@ if(process.env.NODE_ENV !== 'production') {
   })
 }
 
+let defaultAssets = {
+  main: {
+    js: '/build/bundle.js',
+    css: '/build/main.css'
+  }
+}
+
+if(production) {
+  global.assets = require(__dirname + '/../public/build/webpack.assets.json')
+} else {
+  global.assets = defaultAssets
+}
+
+app.use(express.static('public', { maxAge: 86400000 }))
 
 app.use(function(req, res, next) {
   require('./dist/server').default(req, res, next)
 })
-
-app.use(express.static('public', { maxAge: 86400000 }))
 
 const PORT = 9000
 app.listen(PORT, () => console.log('Listening on', PORT))
