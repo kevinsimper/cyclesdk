@@ -27,32 +27,21 @@ export default class Companies extends Component {
   }
   render() {
     return (
-      <table className={styles.Table}>
-        <thead>
-          <tr>
-            <th>Logo</th>
-            <th onClick={this.sortBy.bind(this, 'name')}>Name</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.getCompanies().map((company, key) => {
-            var image = require('./Logos/' + company.logo)
-            return (
-              <tr key={key}>
-                <td>
-                  <div className={styles.Logo}><img src={image}/></div>
-                </td>
-                <td>{company.name}</td>
-                <td><a href={company.url}>{company.url}</a></td>
-                <td>
-                  <Button href={company.url}>Besøg</Button>
-                </td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+      <div className={styles.Companies}>
+        {this.getCompanies().map((company, key) => {
+          var image = require('./Logos/' + company.logo)
+          return (
+            <div key={key} className={styles.Company}>
+              <div>
+                <div className={styles.Logo}><img src={image}/></div>
+              </div>
+              <div>
+                <Button href={company.url}>Besøg</Button>
+              </div>
+            </div>
+          )
+        })}
+      </div>
     )
   }
 }
