@@ -19,16 +19,4 @@ router.get('/', (req, res) => {
   })
 })
 
-// router.get('/countries', (req, res) => {
-//   let html = (
-//     <Layout>
-//       <Header/>
-//       <Content>
-//         <Countries countries={CountriesData.countries}/>
-//       </Content>
-//     </Layout>
-//   )
-//   res.send(renderToString(html))
-// })
-
 export default router
