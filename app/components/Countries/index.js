@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CountriesData from '../../countries.json'
+import styles from './styles.scss'
 
 export default class Countries extends Component {
   render() {
@@ -7,11 +8,15 @@ export default class Countries extends Component {
       <div>
         <h1>Lande</h1>
         <div>Jeg har samlet en liste over alle lande hvor du kan finde gode steder at tage hen!</div>
-        <ul>
+        <div className={styles.Countries}>
           {CountriesData.countries.map((country) => {
-            return <li>{country.name}</li>
+            return (
+              <div className={styles.Country}>
+                {country.name}
+              </div>
+            )
           })}
-        </ul>
+        </div>
       </div>
     )
   }
