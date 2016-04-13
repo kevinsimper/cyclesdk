@@ -1,0 +1,13 @@
+lb:
+  image: dockercloud/haproxy
+  links:
+    - web
+  ports:
+    - "80:80"
+  roles:
+    - global
+web:
+  image: kevinsimper/cyclesdk
+  restart: always
+  target_num_containers: 2
+  autoredeploy: true
