@@ -9,7 +9,7 @@ dependencies:
   cache_directories:
     - "~/docker"
   override:
-    - docker pull node:5
+    - docker pull node:5.6.0
     - mkdir -p ~/docker
     - if [[ -e ~/docker/cyclesdk_web.tar ]]; then docker load -i ~/docker/cyclesdk_web.tar; fi
     - docker-compose build
