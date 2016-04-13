@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CountriesData from './countries.json'
 import styles from './styles.scss'
+import { Link } from 'react-router'
 
 export default class Countries extends Component {
   render() {
@@ -16,7 +17,11 @@ export default class Countries extends Component {
                   {country.name}
                 </div>
                 {country.cities && country.cities.map(city => {
-                  return <div>{city.name}</div>
+                  return (
+                    <div>
+                      <Link to={`/countries/${country.name.toLowerCase()}/${city.name.toLowerCase()}`}>{city.name}</Link>
+                    </div>
+                  )
                 })}
               </div>
             )
