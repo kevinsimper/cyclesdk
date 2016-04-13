@@ -10,17 +10,19 @@ export default class City extends Component {
     let city = country.cities.find(city => {
       return city.name.toLowerCase() === props.params.city
     })
-    require.ensure([], (require) => {
-      let content = require('../../Articles/' + city.file + '.md')
-      this.setState({
-        content
-      })
-    })
     this.state = {
       content: '',
       country,
       city
     }
+  }
+  componentDidMount() {
+    require.ensure([], (require) => {
+      let content = require('../../Articles/' + this.state.city.file + '.md')
+      this.setState({
+        content
+      })
+    })
   }
   render() {
     return (
