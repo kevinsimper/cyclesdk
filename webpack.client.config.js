@@ -3,6 +3,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var AssetsPlugin = require('assets-webpack-plugin')
 var autoprefixer = require('autoprefixer')
 var precss = require('precss')
+var colorFunction = require("postcss-color-function")
 
 var production = process.env.NODE_ENV === 'production'
 var publicPath = '/build/'
@@ -88,12 +89,13 @@ module.exports = {
       {
         test: /\.(woff|eot|woff2|ttf)$/,
         loader: 'url?limit=100000'
-      }
+      },
+      { test: /\.md$/, loader: "html!markdown" }
     ]
   },
   plugins: plugins,
   devtool: 'source-map',
   postcss: function () {
-    return [autoprefixer, precss]
+    return [autoprefixer, colorFunction, precss]
   }
 }

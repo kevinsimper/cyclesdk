@@ -1,0 +1,28 @@
+{
+  "countries": [
+    {
+      "name": "Frankrig",
+      "cities": [
+        {
+          "name": "Alpe d'Huez",
+          "file": "alpedhuez"
+        }
+      ]
+    },
+    {
+      "name": "Spanien"
+    },
+    {
+      "name": "Italien",
+      "cities": [
+        {
+          "name": "Lucca",
+          "file": "lucca"
+        }
+      ]
+    },
+    {
+      "name": "Tyskland"
+    }
+  ]
+}
