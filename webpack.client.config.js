@@ -89,7 +89,8 @@ module.exports = {
       {
         test: /\.(woff|eot|woff2|ttf)$/,
         loader: 'url?limit=100000'
-      }
+      },
+      { test: /\.md$/, loader: "html!markdown" }
     ]
   },
   plugins: plugins,
