@@ -1,7 +1,13 @@
 {
   "countries": [
     {
-      "name": "Frankrig"
+      "name": "Frankrig",
+      "cities": [
+        {
+          "name": "Alpe d'Huez",
+          "file": "alpedhuez"
+        }
+      ]
     },
     {
       "name": "Spanien"
