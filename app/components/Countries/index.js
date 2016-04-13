@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CountriesData from '../../countries.json'
+import CountriesData from './countries.json'
 import styles from './styles.scss'
 
 export default class Countries extends Component {
@@ -12,7 +12,12 @@ export default class Countries extends Component {
           {CountriesData.countries.map((country) => {
             return (
               <div className={styles.Country}>
-                {country.name}
+                <div className={styles.Header}>
+                  {country.name}
+                </div>
+                {country.cities && country.cities.map(city => {
+                  return <div>{city.name}</div>
+                })}
               </div>
             )
           })}
