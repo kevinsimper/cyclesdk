@@ -10,7 +10,13 @@
       ]
     },
     {
-      "name": "Spanien"
+      "name": "Spanien",
+      "cities": [
+        {
+          "name": "Mallorca",
+          "file": "mallorca"
+        }
+      ]
     },
     {
       "name": "Italien",
@@ -22,7 +28,13 @@
       ]
     },
     {
-      "name": "Tyskland"
+      "name": "Tyskland",
+      "cities": [
+        {
+          "name": "Harzen",
+          "file": "harzen"
+        }
+      ]
     }
   ]
 }
