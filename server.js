@@ -34,7 +34,7 @@ let defaultAssets = {
 }
 
 if(production) {
-  global.assets = require(__dirname + '/../public/build/webpack.assets.json')
+  global.assets = require(__dirname + '/public/build/webpack.assets.json')
 } else {
   global.assets = defaultAssets
 }
