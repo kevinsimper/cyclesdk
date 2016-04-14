@@ -19,7 +19,6 @@ export default class Layout extends Component {
       <html>
         <head>
           <title>Cycles.dk</title>
-          <link rel='stylesheet' href={this.props.assets.main.css}/>
           <script dangerouslySetInnerHTML={this.getAnalytics()}></script>
         </head>
         <body>
