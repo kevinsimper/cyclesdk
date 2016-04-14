@@ -16,13 +16,15 @@ export default class Countries extends Component {
                 <div className={styles.Header}>
                   {country.name}
                 </div>
-                {country.cities && country.cities.map(city => {
-                  return (
-                    <div>
-                      <Link to={`/countries/${country.name.toLowerCase()}/${city.name.toLowerCase()}`}>{city.name}</Link>
-                    </div>
-                  )
-                })}
+                <div className={styles.Cities}>
+                  {country.cities && country.cities.map(city => {
+                    return (
+                      <div>
+                        <Link to={`/countries/${country.name.toLowerCase()}/${city.name.toLowerCase()}`}>{city.name}</Link>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
             )
           })}
