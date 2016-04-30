@@ -30,6 +30,14 @@ export default class City extends Component {
         <div dangerouslySetInnerHTML={{__html: this.state.content}} />
         <div>Country: {this.state.country.name}</div>
         <div>City: {this.state.city.name}</div>
+        <iframe
+          width='100%'
+          height='450'
+          frameBorder='0'
+          style={{margin: '20 0',border: 0}}
+          src={`https://www.google.com/maps/embed/v1/search?q=${this.state.city.name}&key=AIzaSyAhTARSQYOOO7NNVIV2ckKYBUGPFK5oAYw`}
+          allowFullScreen>
+        </iframe>
       </div>
     )
   }
