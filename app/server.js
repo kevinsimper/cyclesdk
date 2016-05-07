@@ -14,10 +14,18 @@ router.get('/countries/:country/:city', (req, res) => {
   let selectedCountry = countries.find(c => {
     return c.name.toLowerCase() === country
   })
+  if(!selectedCountry) {
+    res.send(404)
+    return false;
+  }
   let selectedCity = selectedCountry.cities.find(c => {
-    return c.name.toLowerCase() === city
+    return c.file.toLowerCase() === city
   })
-  let content = require('./Articles/' + selectedCity.file + '.md')
+  if(!selectedCity) {
+    res.send(404)
+    return false;
+  }
+  let content = require(`./Articles/${selectedCity.file}/${selectedCity.file}.md`)
   let state = {
     content: content,
     country: selectedCountry,
