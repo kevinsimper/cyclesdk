@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import styles from './style.scss'
 
 export default class City extends Component {
   render() {
     const { content, city, country } = this.props
     return (
       <div>
-        <div dangerouslySetInnerHTML={{__html: content}} />
+        <div className={styles.Header}>
+          <img src={`/images/${city.file}/header.jpg`}/>
+        </div>
+        <div className={styles.Content} dangerouslySetInnerHTML={{__html: content}} />
         <div>Country: {country.name}</div>
         <div>City: {city.name}</div>
         <iframe
