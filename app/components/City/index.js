@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import CountriesData from '../Countries/countries.json'
 
 export default class City extends Component {
   constructor(props) {
     super()
-    let country = CountriesData.countries.find(country => {
+    let country = props.countries.find(country => {
       return country.name.toLowerCase() === props.params.country
     })
     let city = country.cities.find(city => {
