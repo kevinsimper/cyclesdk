@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CountriesData from '../Countries/countries.json'
+import CountriesData from '../../countries.json'
 
 export default class Country extends Component {
   render() {
