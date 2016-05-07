@@ -4,10 +4,9 @@ import City from '../components/City'
 
 export default class CityContainer extends Component {
   render() {
-    const { countries, params } = this.props
     return (
       <div>
-        <City countries={countries} params={params}/>
+        <City {...this.props}/>
       </div>
     )
   }
@@ -15,7 +14,10 @@ export default class CityContainer extends Component {
 
 function mapState(state) {
   return {
-    countries: state.countries
+    countries: state.countries,
+    content: state.content,
+    city: state.city,
+    country: state.country
   }
 }
 

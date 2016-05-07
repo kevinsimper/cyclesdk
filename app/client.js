@@ -6,7 +6,8 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import appStore from './reducers'
 
-const store = createStore(appStore)
+const initialState = window.__INITIAL_STATE__
+const store = createStore(appStore, initialState)
 const app = (
   <Provider store={store}>
     <Router history={browserHistory}>

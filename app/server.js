@@ -3,12 +3,35 @@ import React from 'react'
 import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import Layout from './components/Layout'
 import renderStatic from './renderStatic'
+import CountriesData from './countries.json'
 
 let router = express.Router()
 let production = process.env.NODE_ENV === 'production'
 
+router.get('/countries/:country/:city', (req, res) => {
+  const { country, city } = req.params
+  let countries = CountriesData.countries
+  let selectedCountry = countries.find(c => {
+    return c.name.toLowerCase() === country
+  })
+  let selectedCity = selectedCountry.cities.find(c => {
+    return c.name.toLowerCase() === city
+  })
+  let content = require('./Articles/' + selectedCity.file + '.md')
+  let state = {
+    content: content,
+    country: selectedCountry,
+    city: selectedCity
+  }
+  output(req, res, state)
+})
+
 router.get('*', (req, res) => {
-  renderStatic(req, res, (output, initialState) => {
+  output(req, res, {})
+})
+
+function output(req, res, state) {
+  renderStatic(req, res, state, (output, initialState) => {
     let html = (
       <Layout assets={global.assets}>
         <div dangerouslySetInnerHTML={{__html: output}} />
@@ -19,6 +42,6 @@ router.get('*', (req, res) => {
     let fullOutput = renderToStaticMarkup(html)
     res.send(fullOutput)
   })
-})
+}
 
 export default router
