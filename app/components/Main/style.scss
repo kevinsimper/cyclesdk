@@ -3,7 +3,11 @@ html, body {
 }
 body {
   background-color: #ececec;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+h1, h2 {
+  font-weight: 300;
 }
 .wrapper {
   max-width: 1000px;

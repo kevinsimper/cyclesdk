@@ -20,7 +20,7 @@ export default class Countries extends Component {
                   {country.cities && country.cities.map(city => {
                     return (
                       <div>
-                        <Link to={`/countries/${country.name.toLowerCase()}/${city.name.toLowerCase()}`}>{city.name}</Link>
+                        <a href={`/countries/${country.name.toLowerCase()}/${city.file.toLowerCase()}`}>{city.name}</a>
                       </div>
                     )
                   })}
