@@ -51,7 +51,9 @@
     "postcss-color-function": "^2.0.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-redux": "^4.4.5",
     "react-router": "^2.0.1",
+    "redux": "^3.5.2",
     "source-map-support": "^0.4.0"
   }
 }
