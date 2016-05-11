@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
+import Newsletter from '../Newsletter'
 
 export default class City extends Component {
   render() {
-    const { content, city, country } = this.props
+    const { content, city } = this.props
     return (
       <div>
         <div className={styles.Header}>
@@ -21,6 +22,7 @@ export default class City extends Component {
             </iframe>
           </div>
         </div>
+        <Newsletter/>
       </div>
     )
   }
