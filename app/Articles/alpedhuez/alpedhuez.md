@@ -14,7 +14,7 @@ En cykelrejse til Alpe d'Huez koster typisk mellem 6000 for 3 overnatninger til 
 
 For at kommer til Alpe d'Huez kan du tage et fly til Geneve i Schweiz, hvor der herefter er en køretur på 200 kilometer hen til bunden af bjerget. Afhænging af sæsonen koster det mellem 500 til 1000 kroner at flyve til Geneve.
 
-## Hvor meget skal jeg træne inden Aple d'Huez?
+## Hvor meget skal jeg træne inden Alpe d'Huez?
 
 Alpe d'Huez er et virkeligt langt og stejt bjerg, så det kræver noget af fysikken, så det anbefales at du har kørt 3500 kilometer inden du tager afsted for at du kan nyde hele turen.
 
