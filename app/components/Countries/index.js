@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styles from './styles.scss'
-import { Link } from 'react-router'
 
 export default class Countries extends Component {
   render() {
@@ -19,9 +18,14 @@ export default class Countries extends Component {
                 <div className={styles.Cities}>
                   {country.cities && country.cities.map(city => {
                     return (
-                      <div>
-                        <a href={`/countries/${country.name.toLowerCase()}/${city.file.toLowerCase()}`}>{city.name}</a>
-                      </div>
+                      <a className={styles.City} href={`/countries/${country.name.toLowerCase()}/${city.file.toLowerCase()}`}>
+                        <div className={styles.CityImage}>
+                          <img src={`/images/${city.file.toLowerCase()}/header.jpg`} />
+                        </div>
+                        <div className={styles.CityHeader}>
+                          {city.name}
+                        </div>
+                      </a>
                     )
                   })}
                 </div>
