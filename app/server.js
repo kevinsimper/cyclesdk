@@ -4,6 +4,15 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import Layout from './components/Layout'
 import renderStatic from './renderStatic'
 import CountriesData from './countries.json'
+import Sequelize from 'sequelize'
+
+let database = new Sequelize('postgres://localhost:5432/cyclesdk')
+import subscriberModel from './Models/subscriber'
+let Subscriber = database.define(subscriberModel.name, subscriberModel.columns)
+
+database.sync().then(() => {
+  console.log('done')
+})
 
 let router = express.Router()
 let production = process.env.NODE_ENV === 'production'
