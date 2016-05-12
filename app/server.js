@@ -8,15 +8,20 @@ import Sequelize from 'sequelize'
 import bodyParser from 'body-parser'
 import restapi from 'sequelize-restapi'
 
-let database = new Sequelize('postgres://localhost:5432/cyclesdk')
+let connectionString = process.env.POSTGRES || 'postgres://localhost:5432/cyclesdk'
+let database = new Sequelize(connectionString, {
+  native: true
+})
 import subscriberModel from './Models/subscriber'
 let Subscriber = database.define(subscriberModel.name, subscriberModel.columns)
 
-database.sync().then(() => {
-  console.log('done')
-})
-
 let production = process.env.NODE_ENV === 'production'
+if(!production) {
+  database.sync().then(() => {
+    console.log('done sync')
+  })
+}
+
 let router = express.Router()
 router.use(bodyParser.json())
 
