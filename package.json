@@ -59,6 +59,7 @@
     "react-router": "^2.0.1",
     "redux": "^3.5.2",
     "sequelize": "^3.23.0",
+    "sequelize-restapi": "^0.2.4",
     "source-map-support": "^0.4.0"
   }
 }
