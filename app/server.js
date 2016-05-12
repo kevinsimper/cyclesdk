@@ -5,6 +5,7 @@ import Layout from './components/Layout'
 import renderStatic from './renderStatic'
 import CountriesData from './countries.json'
 import Sequelize from 'sequelize'
+import bodyParser from 'body-parser'
 
 let database = new Sequelize('postgres://localhost:5432/cyclesdk')
 import subscriberModel from './Models/subscriber'
@@ -14,8 +15,9 @@ database.sync().then(() => {
   console.log('done')
 })
 
-let router = express.Router()
 let production = process.env.NODE_ENV === 'production'
+let router = express.Router()
+router.use(bodyParser.json())
 
 router.get('/countries/:country/:city', (req, res) => {
   const { country, city } = req.params
