@@ -4,10 +4,28 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import Layout from './components/Layout'
 import renderStatic from './renderStatic'
 import CountriesData from './countries.json'
+import Sequelize from 'sequelize'
+import bodyParser from 'body-parser'
+import restapi from 'sequelize-restapi'
+
+let connectionString = process.env.POSTGRES || 'postgres://localhost:5432/cyclesdk'
+let database = new Sequelize(connectionString, {
+  native: true
+})
+import subscriberModel from './Models/subscriber'
+let Subscriber = database.define(subscriberModel.name, subscriberModel.columns)
+
+let production = process.env.NODE_ENV === 'production'
+if(!production) {
+  database.sync().then(() => {
+    console.log('done sync')
+  })
+}
 
 let router = express.Router()
-let production = process.env.NODE_ENV === 'production'
+router.use(bodyParser.json())
 
+router.use('/api/subscriber', restapi(Subscriber))
 router.get('/countries/:country/:city', (req, res) => {
   const { country, city } = req.params
   let countries = CountriesData.countries

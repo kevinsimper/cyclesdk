@@ -1,0 +1,22 @@
+.Form {
+  background-color: #FDD835;
+  padding: 40px;
+  margin: 20px 0;
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  input {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    min-width: 400px;
+  }
+  button {
+    background-color: dodgerblue;
+    border: 0px;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+  }
+}
