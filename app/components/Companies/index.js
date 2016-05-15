@@ -32,8 +32,10 @@ export default class Companies extends Component {
           var image = require('./Logos/' + company.logo)
           return (
             <div key={key} className={styles.Company}>
-              <div>
-                <div className={styles.Logo}><img src={image}/></div>
+              <div className={styles.LogoContainer}>
+                <div className={styles.Logo}>
+                  <img src={image}/>
+                </div>
               </div>
               <div>
                 <Button href={company.url}>Besøg</Button>
