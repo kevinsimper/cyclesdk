@@ -1,7 +1,7 @@
 .Countries {
   display: flex;
-  flex-direction: column;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 $darken1: color(#9BDF46 shade(10%));
@@ -9,6 +9,9 @@ $darken2: color(#25A55F shade(10%));
 
 .Country {
   margin: 20px 0;
+  max-width: 400px;
+  width: 100%;
+  padding: 0 10px;
 }
 .Cities {
   margin: 10px 0;

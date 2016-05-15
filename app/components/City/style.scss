@@ -9,7 +9,6 @@
 }
 .Content {
   line-height: 1.5em;
-  text-align: justify;
   flex: 1
 }
 .Grid {
@@ -24,6 +23,7 @@
   width: 100%;
   height: 450px;
   border: 0;
+  pointer-events: none;
   @media (min-width: 800px) {
     margin: 20px;
   }

@@ -9,7 +9,7 @@ export default class Layout extends Component {
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-4309863-21', 'auto')
+        ga('create', 'UA-4309863-21', 'cycles.dk')
         ga('send', 'pageview')
       `
     }
@@ -20,6 +20,7 @@ export default class Layout extends Component {
         <head>
           <title>Cycles.dk</title>
           <link rel='stylesheet' href={this.props.assets.main.css}/>
+          <link rel="shortcut icon" href={'/favicon.png'}/>
           <script dangerouslySetInnerHTML={this.getAnalytics()}></script>
         </head>
         <body>
