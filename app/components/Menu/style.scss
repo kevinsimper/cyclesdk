@@ -2,9 +2,29 @@
   display: flex;
   background: color(#1e90ff shade(30%));
   color: white;
-  padding: 10px 10px 15px;
+  padding: 0 10px;
+  flex-direction: column;
+  @media(min-width: 800px) {
+    flex-direction: row;
+  }
   a {
     color: white;
-    padding: 0 10px;
+    font-size: 22px;
+    padding: 10px 20px 15px;
+    text-decoration: none;
+    @media(max-width: 800px) {
+      border-bottom: 2px solid color(#1e90ff shade(40%));
+    }
+    @media(min-width: 800px) {
+      border-right: 2px solid color(#1e90ff shade(40%));
+    }
+    &:hover {
+      background: color(#1e90ff shade(50%));
+    }
   }
+}
+.Desc {
+  margin: 5px 0 0;
+  display: block;
+  font-size: small;
 }

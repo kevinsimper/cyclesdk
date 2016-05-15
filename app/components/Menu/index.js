@@ -1,13 +1,18 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 import styles from './style.scss'
 
 export default class Menu extends Component {
   render() {
     return (
       <div className={styles.Links}>
-        <Link to={'/'}>Home</Link>
-        <Link to={'/countries'}>Countries</Link>
+        <a href={'/'}>
+          Hjem
+          <span className={styles.Desc}>Gå til forsiden</span>
+        </a>
+        <a href={'/countries'}>
+          Destinationer
+          <span className={styles.Desc}>Oplev nye steder at tage hen</span>
+        </a>
       </div>
     )
   }
