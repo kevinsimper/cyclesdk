@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Button from '../Button'
 import styles from './style.scss'
 import { sortBy } from 'lodash'
+import Company from '../Company'
 
 export default class Companies extends Component {
   constructor() {
@@ -29,19 +29,7 @@ export default class Companies extends Component {
     return (
       <div className={styles.Companies}>
         {this.getCompanies().map((company, key) => {
-          var image = require('./Logos/' + company.logo)
-          return (
-            <div key={key} className={styles.Company}>
-              <div className={styles.LogoContainer}>
-                <div className={styles.Logo}>
-                  <img src={image}/>
-                </div>
-              </div>
-              <div>
-                <Button href={company.url}>Besøg</Button>
-              </div>
-            </div>
-          )
+          return <Company key={key} company={company}/>
         })}
       </div>
     )

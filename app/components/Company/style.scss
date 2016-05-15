@@ -1,0 +1,38 @@
+.Company {
+  flex: 1 0 250px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px -4px;
+  margin: 10px;
+  padding: 0 0 10px;
+  text-align: center;
+}
+.Logo {
+  max-width: 200px;
+  padding: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  img {
+    width: 100%;
+  }
+}
+.LogoContainer {
+  min-height: 100px;
+  position: relative;
+}
+.Info {
+  background-color: color(#1565B3 lightness(60%));
+  margin: 0 0 10px;
+  color: white;
+  div {
+    padding: 10px;
+  }
+  div:nth-child(2n) {
+    background-color: color(#1565B3 lightness(50%));
+  }
+}

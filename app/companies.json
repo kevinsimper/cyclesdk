@@ -23,7 +23,8 @@
     {
       "name": "Stigs Cykelrejser",
       "url": "http://www.cykelstig.dk",
-      "logo": "cykelstig.png"
+      "logo": "cykelstig.png",
+      "level": "Erfarne"
     },
     {
       "name": "Papuga Cykelrejser",
@@ -33,7 +34,8 @@
     {
       "name": "Dan Frost Cykelrejser",
       "url": "http://dan-frost.dk",
-      "logo": "danfrost.png"
+      "logo": "danfrost.png",
+      "level": "Erfarne"
     },
     {
       "name": "Spies Rejser",
@@ -48,7 +50,9 @@
     {
       "name": "Ørslev Rejser",
       "url": "http://www.orslev.dk/Rejser/Cykelrejser%20og%20cykelevents.aspx",
-      "logo": "orslev.png"
+      "logo": "orslev.png",
+      "level": "Erfarne",
+      "trustpilot": 7.4
     },
     {
       "name": "DANcycling",
@@ -63,7 +67,8 @@
     {
       "name": "PP CyclingTours",
       "url": "http://www.ppcyclingtours.dk",
-      "logo": "ppcyclingtours.jpg"
+      "logo": "ppcyclingtours.jpg",
+      "level": "Erfarne"
     },
     {
       "name": "Tema Rejser",
@@ -78,12 +83,14 @@
     {
       "name": "Jysk Rejsebureau",
       "url": "http://www.jysk-rejsebureau.dk",
-      "logo": "jyskrejse.png"
+      "logo": "jyskrejse.png",
+      "trustpilot": 8.9
     },
     {
       "name": "Bravo Tours",
       "url": "http://www.bravotours.dk",
-      "logo": "bravotours.jpg"
+      "logo": "bravotours.jpg",
+      "trustpilot": 5.9
     },
     {
       "name": "Mountain Adventures",
@@ -98,12 +105,14 @@
     {
       "name": "Gislev Rejser",
       "url": "http://www.gislev-rejser.dk",
-      "logo": "gislev.png"
+      "logo": "gislev.png",
+      "trustpilot": 8.7
     },
     {
       "name": "MTB Tours",
       "url": "http://mtb-tours.dk",
-      "logo": "mtbtours.png"
+      "logo": "mtbtours.png",
+      "trustpilot": 7.4
     },
     {
       "name": "Ghisallo",
