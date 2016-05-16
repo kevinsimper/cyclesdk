@@ -15,11 +15,12 @@ export default class Layout extends Component {
     }
   }
   render() {
+    const { assets, title } = this.props
     return (
       <html>
         <head>
-          <title>Cycles.dk</title>
           <link rel='stylesheet' href={this.props.assets.main.css}/>
+          {title.toComponent()}
           <link rel="shortcut icon" href={'/favicon.png'}/>
           <script dangerouslySetInnerHTML={this.getAnalytics()}></script>
         </head>
@@ -27,7 +28,7 @@ export default class Layout extends Component {
           <div id='wrapper'>
             {this.props.children}
           </div>
-          <script src={this.props.assets.main.js}></script>
+          <script src={assets.main.js}></script>
         </body>
       </html>
     )

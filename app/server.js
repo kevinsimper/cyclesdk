@@ -7,6 +7,7 @@ import CountriesData from './countries.json'
 import Sequelize from 'sequelize'
 import bodyParser from 'body-parser'
 import restapi from 'sequelize-restapi'
+import Helmet from 'react-helmet'
 
 let connectionString = process.env.POSTGRES || 'postgres://localhost:5432/cyclesdk'
 let database = new Sequelize(connectionString, {
@@ -65,8 +66,9 @@ let defaultState = {
 function output(req, res, state) {
   state = Object.assign({}, defaultState, state)
   renderStatic(req, res, state, (output, initialState) => {
+    let head = Helmet.rewind();
     let html = (
-      <Layout assets={global.assets}>
+      <Layout assets={global.assets} title={head.title}>
         <div dangerouslySetInnerHTML={{__html: output}} />
         <script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__ = ${JSON.stringify(initialState)}`}}>
         </script>

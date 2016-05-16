@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
 import Newsletter from '../Newsletter'
+import Helmet from "react-helmet"
 
 export default class City extends Component {
   render() {
     const { content, city } = this.props
     return (
       <div>
+        <Helmet title={`Alt om ${city.name} cykelrejse`}/>
         <div className={styles.Header}>
           <img src={`/images/${city.file}/header.jpg`}/>
         </div>
