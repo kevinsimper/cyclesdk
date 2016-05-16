@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
-import Companies from '../Companies'
 
 export default class HelloWorld extends Component {
   render() {
@@ -10,7 +9,6 @@ export default class HelloWorld extends Component {
         <h1>Hej cykelrytter!</h1>
         Her er en liste over alle de bedste danske udbydere af cykelrejser!
         </div>
-        <Companies companies={this.props.companies}/>
       </div>
     )
   }

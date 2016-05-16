@@ -56,7 +56,13 @@ router.get('*', (req, res) => {
   output(req, res, {})
 })
 
+let defaultState = {
+  sorting: {
+    trustpilot: 1
+  }
+}
 function output(req, res, state) {
+  state = Object.assign({}, defaultState, state)
   renderStatic(req, res, state, (output, initialState) => {
     let html = (
       <Layout assets={global.assets}>

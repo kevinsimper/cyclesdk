@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import HelloWorld from '../components/HelloWorld'
+import Companies from '../components/Companies'
+import { sortTrustpilot } from '../actions'
 
 export default class HelloWorldContainer extends Component {
   render() {
-    const { companies } = this.props
+    const { companies, sorting, dispatch } = this.props
     return (
       <div>
-        <HelloWorld companies={companies}/>
+        <HelloWorld/>
+        <Companies
+          companies={companies}
+          sorting={sorting}
+          onChangeSortingTrustpilot={(sort) => dispatch(sortTrustpilot(sort))}
+          />
       </div>
     )
   }
@@ -15,7 +22,8 @@ export default class HelloWorldContainer extends Component {
 
 function mapState(state) {
   return {
-    companies: state.companies
+    companies: state.companies,
+    sorting: state.sorting
   }
 }
 

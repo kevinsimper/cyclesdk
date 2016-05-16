@@ -1,36 +1,35 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
-import { sortBy } from 'lodash'
 import Company from '../Company'
 
 export default class Companies extends Component {
   constructor() {
     super()
-
-    this.state = {
-      sort: 'name',
-      inverse: false
-    }
   }
-  getCompanies() {
-    var sorted = sortBy(this.props.companies, 'name')
-    if(this.state.inverse) {
-      sorted.reverse()
-    }
-    return sorted
-  }
-  sortBy(item) {
-    this.setState({
-      sort: item,
-      inverse: !this.state.inverse
-    })
+  onChangeTrustpilot(e) {
+    this.props.onChangeSortingTrustpilot(e.target.value)
   }
   render() {
+    const { companies, sorting } = this.props
     return (
-      <div className={styles.Companies}>
-        {this.getCompanies().map((company, key) => {
-          return <Company key={key} company={company}/>
-        })}
+      <div>
+        <div className={styles.Sorting}>
+          <div>
+            <div>Trustpilot score:</div>
+            <div>
+              <select onChange={this.onChangeTrustpilot.bind(this)} value={sorting.trustpilot}>
+                <option value='1'>Vis alle</option>
+                <option value='2'>Højeste</option>
+                <option value='3'>Laveste</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className={styles.Companies}>
+          {companies.map((company, key) => {
+            return <Company key={key} company={company}/>
+          })}
+        </div>
       </div>
     )
   }
