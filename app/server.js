@@ -58,7 +58,8 @@ router.get('*', (req, res) => {
 
 let defaultState = {
   sorting: {
-    trustpilot: 1
+    trustpilot: 1,
+    level: 1
   }
 }
 function output(req, res, state) {

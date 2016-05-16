@@ -10,6 +10,9 @@ export default class Companies extends Component {
   onChangeTrustpilot(e) {
     this.props.onChangeSortingTrustpilot(e.target.value)
   }
+  onChangeLevel(e) {
+    this.props.onChangeSortingLevel(e.target.value)
+  }
   render() {
     const { companies, sorting } = this.props
     return (
@@ -25,6 +28,16 @@ export default class Companies extends Component {
                 <option value='1'>Vis alle</option>
                 <option value='2'>Højeste</option>
                 <option value='3'>Laveste</option>
+              </Select>
+            </div>
+          </div>
+          <div className={styles.SortOption}>
+            <strong>Målgruppe</strong>
+            <div>
+              <Select onChange={this.onChangeLevel.bind(this)} value={sorting.level}>
+                <option value='1'>Vis alle</option>
+                <option value='2'>Nybegyndere</option>
+                <option value='3'>Erfarne</option>
               </Select>
             </div>
           </div>

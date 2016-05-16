@@ -5,3 +5,11 @@ export function sortTrustpilot(order) {
     order
   }
 }
+
+export const SORT_LEVEL = 'SORT_LEVEL'
+export function sortLevel(order) {
+  return {
+    type: SORT_LEVEL,
+    order
+  }
+}
