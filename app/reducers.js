@@ -15,7 +15,6 @@ function sorting(state, action) {
 function companies(state, action) {
   switch (action.type) {
     case SORT_TRUSTPILOT:
-      console.log('sorting')
       return state.sort((a, b) => {
         let aTrust = (a.trustpilot) ? a.trustpilot : 0
         let bTrust = (b.trustpilot) ? b.trustpilot : 0

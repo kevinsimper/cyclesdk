@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
 import Company from '../Company'
+import Select from '../Select'
 
 export default class Companies extends Component {
   constructor() {
@@ -17,11 +18,11 @@ export default class Companies extends Component {
           <div>
             <div>Trustpilot score:</div>
             <div>
-              <select onChange={this.onChangeTrustpilot.bind(this)} value={sorting.trustpilot}>
+              <Select onChange={this.onChangeTrustpilot.bind(this)} value={sorting.trustpilot}>
                 <option value='1'>Vis alle</option>
                 <option value='2'>Højeste</option>
                 <option value='3'>Laveste</option>
-              </select>
+              </Select>
             </div>
           </div>
         </div>
