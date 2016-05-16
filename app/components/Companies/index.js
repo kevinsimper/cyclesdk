@@ -16,7 +16,10 @@ export default class Companies extends Component {
       <div>
         <div className={styles.Sorting}>
           <div>
-            <div>Trustpilot score:</div>
+            <h2>Sortering</h2>
+          </div>
+          <div className={styles.SortOption}>
+            <strong>Trustpilot score</strong>
             <div>
               <Select onChange={this.onChangeTrustpilot.bind(this)} value={sorting.trustpilot}>
                 <option value='1'>Vis alle</option>
