@@ -8,6 +8,15 @@ import appStore from './reducers'
 
 const initialState = window.__INITIAL_STATE__
 const store = createStore(appStore, initialState)
+
+if(module.hot) {
+  // Enable Webpack hot module replacement for reducers
+  module.hot.accept('./reducers', () => {
+    const nextReducer = require('./reducers').default;
+    store.replaceReducer(nextReducer);
+  });
+}
+
 const app = (
   <Provider store={store}>
     <Router history={browserHistory}>
