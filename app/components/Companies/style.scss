@@ -7,7 +7,16 @@
   display: flex;
   padding: 10px;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  @media(min-width: 600px) {
+    flex-direction: row;
+  }
 }
 .SortOption {
   margin: 0 10px;
+  width: 100%;
+  div {
+    width: 100%;
+  }
 }
