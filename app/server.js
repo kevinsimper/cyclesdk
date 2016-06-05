@@ -1,6 +1,6 @@
 import express from 'express'
 import React from 'react'
-import { renderToString, renderToStaticMarkup } from 'react-dom/server'
+import { renderToStaticMarkup } from 'react-dom/server'
 import Layout from './components/Layout'
 import renderStatic from './renderStatic'
 import CountriesData from './countries.json'
@@ -12,6 +12,9 @@ import Helmet from 'react-helmet'
 let connectionString = process.env.POSTGRES || 'postgres://localhost:5432/cyclesdk'
 let database = new Sequelize(connectionString, {
   native: true
+})
+database.authenticate().catch(() => {
+  console.log('Could not connect to database!')
 })
 import subscriberModel from './Models/subscriber'
 let Subscriber = database.define(subscriberModel.name, subscriberModel.columns)
