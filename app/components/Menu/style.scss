@@ -2,9 +2,10 @@
   display: flex;
   background: color(#1e90ff shade(30%));
   color: white;
-  padding: 0 10px;
+  padding: 5px 10px;
   flex-direction: column;
   @media(min-width: 800px) {
+    padding: 0 10px;
     flex-direction: row;
   }
   a {

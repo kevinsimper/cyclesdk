@@ -22,6 +22,9 @@ $darken2: color(#25A55F shade(10%));
 .CityImage {
   width: 100%;
   max-width: 400px;
+  max-height: 180px;
+  background-color: #78CEFD;
+  overflow: hidden;
   img {
     width: 100%;
   }
