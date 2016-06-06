@@ -56,6 +56,14 @@ router.get('/countries/:country/:city', (req, res) => {
   output(req, res, state)
 })
 
+router.get('/companies/:company', (req, res) => {
+  const { company } = req.params
+  let state = {
+    company: company
+  }
+  output(req, res, state) 
+})
+
 router.get('*', (req, res) => {
   output(req, res, {})
 })
