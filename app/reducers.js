@@ -5,8 +5,7 @@ function sorting(state, action) {
     case SORT_TRUSTPILOT:
       return Object.assign({}, state, {
         trustpilot: action.order
-      })
-      break;
+      });
     case SORT_LEVEL:
       return Object.assign({}, state, {
         level: action.order
@@ -25,21 +24,17 @@ function companies(state, action) {
         switch (action.order) {
           case "2":
             return bTrust - aTrust
-            break;
           case "3":
             return aTrust - bTrust
-            break;
           default:
             return bTrust
         }
       })
-      break;
     case SORT_LEVEL:
       return state.filter(x => {
         switch (action.order) {
           case "2":
             return x.level !== 'Erfarne'
-            break;
           case "3":
             return x.level === 'Erfarne'
           default:
@@ -59,7 +54,6 @@ export default function appStore(state, action) {
         sorting: sorting(state.sorting, action),
         sortedCompanies: companies(state.companies, action)
       })
-      break;
     default:
       return state
   }
