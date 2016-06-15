@@ -24,6 +24,10 @@
         {
           "name": "Lucca",
           "file": "lucca"
+        },
+        {
+          "name": "Gardasøen",
+          "file": "gardalake"
         }
       ]
     },
