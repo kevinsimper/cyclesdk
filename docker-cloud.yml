@@ -1,15 +1,9 @@
-lb:
-  image: dockercloud/haproxy
-  links:
-    - web
-  ports:
-    - "80:80"
-  roles:
-    - global
-web:
+cyclesdk:
   image: kevinsimper/cyclesdk
   restart: always
   target_num_containers: 2
   autoredeploy: true
   environment:
     - NODE_ENV=production
+    - VIRTUAL_HOST=www.cycles.dk, cycles.dk
+    - POSTGRES=######
