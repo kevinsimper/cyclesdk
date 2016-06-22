@@ -18,29 +18,5 @@ $darken2: color(#25A55F shade(10%));
 }
 .Header {
   font-size: 2em;
-}
-.CityImage {
-  width: 100%;
-  max-width: 400px;
-  max-height: 180px;
-  background-color: #78CEFD;
-  overflow: hidden;
-  img {
-    width: 100%;
-  }
-}
-.City {
-  font-size: 1.5em;
-  position: relative;
-  display: inline-block;
-  margin: 10px 0;
-}
-.CityHeader {
-  position: absolute;;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  background-color: white;
-  padding: 10px;
-  color: black;
+  color: #111;
 }

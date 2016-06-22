@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from './styles.scss'
+import CityCard from '../CityCard'
 
 export default class Countries extends Component {
   render() {
@@ -9,23 +10,16 @@ export default class Countries extends Component {
         <h1>Lande</h1>
         <div>Jeg har samlet en liste over alle lande hvor du kan finde gode steder at tage hen!</div>
         <div className={styles.Countries}>
-          {countries.map((country) => {
+          {countries.map((country, key) => {
             return (
-              <div className={styles.Country}>
-                <div className={styles.Header}>
+              <div key={key} className={styles.Country}>
+                <a className={styles.Header} href={`/countries/${country.file}`}>
                   {country.name}
-                </div>
+                </a>
                 <div className={styles.Cities}>
-                  {country.cities && country.cities.map(city => {
+                  {country.cities && country.cities.map((city, key) => {
                     return (
-                      <a className={styles.City} href={`/countries/${country.name.toLowerCase()}/${city.file.toLowerCase()}`}>
-                        <div className={styles.CityImage}>
-                          <img src={`/images/${city.file.toLowerCase()}/header.jpg`} />
-                        </div>
-                        <div className={styles.CityHeader}>
-                          {city.name}
-                        </div>
-                      </a>
+                      <CityCard key={key} city={city} country={country.name}/>
                     )
                   })}
                 </div>

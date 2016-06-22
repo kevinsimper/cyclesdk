@@ -2,6 +2,7 @@
   "countries": [
     {
       "name": "Frankrig",
+      "file": "frankrig",
       "cities": [
         {
           "name": "Alpe d'Huez",
@@ -11,6 +12,7 @@
     },
     {
       "name": "Spanien",
+      "file": "spanien",
       "cities": [
         {
           "name": "Mallorca",
@@ -20,6 +22,7 @@
     },
     {
       "name": "Italien",
+      "file": "italien",
       "cities": [
         {
           "name": "Lucca",
@@ -33,6 +36,7 @@
     },
     {
       "name": "Tyskland",
+      "file": "tyskland",
       "cities": [
         {
           "name": "Harzen",

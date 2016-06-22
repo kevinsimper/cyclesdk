@@ -30,6 +30,25 @@ let router = express.Router()
 router.use(bodyParser.json())
 
 router.use('/api/subscriber', restapi(Subscriber))
+router.get('/countries/:country', (req, res) => {
+  const { country } = req.params
+  let countries = CountriesData.countries
+  let selectedCountry = countries.find(c => {
+    return c.name.toLowerCase() === country
+  })
+  if(!selectedCountry) {
+    res.send(404)
+    return false;
+  }
+  let content = require(`./Articles/${selectedCountry.file}/${selectedCountry.file}.md`)
+  let state = {
+    country: country,
+    content: content,
+    cities: selectedCountry.cities
+  }
+  output(req, res, state)
+})
+
 router.get('/countries/:country/:city', (req, res) => {
   const { country, city } = req.params
   let countries = CountriesData.countries
@@ -61,7 +80,7 @@ router.get('/companies/:company', (req, res) => {
   let state = {
     company: company
   }
-  output(req, res, state) 
+  output(req, res, state)
 })
 
 router.get('*', (req, res) => {

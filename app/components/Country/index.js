@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
-import CountriesData from '../../countries.json'
+import styles from './style.scss'
+import CityCard from '../CityCard'
+import Helmet from 'react-helmet'
 
 export default class Country extends Component {
   render() {
-    let country = CountriesData.countries.find(country => {
-      return country.name.toLowerCase() === this.props.params.country
-    })
+    const { content, cities, country } = this.props
     return (
-      <div>Country: {country.name}</div>
+      <div>
+        <Helmet title={`Cykelrejser ${country} - Alt du skal vide!`}/>
+        <div dangerouslySetInnerHTML={{__html: content}} />
+        <div className={styles.Cities}>
+          {cities && cities.map((city, key) => {
+            return (
+              <div className={styles.City}>
+                <CityCard key={key} city={city} country={country}/>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     )
   }
 }
