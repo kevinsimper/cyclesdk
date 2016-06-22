@@ -4,6 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import Layout from './components/Layout'
 import renderStatic from './renderStatic'
 import CountriesData from './countries.json'
+import CompaniesData from './companies.json'
 import Sequelize from 'sequelize'
 import bodyParser from 'body-parser'
 import restapi from 'sequelize-restapi'
@@ -77,8 +78,9 @@ router.get('/countries/:country/:city', (req, res) => {
 
 router.get('/companies/:company', (req, res) => {
   const { company } = req.params
+  let companySelected = CompaniesData.companies.find(c => c.slug === company)
   let state = {
-    company: company
+    company: companySelected
   }
   output(req, res, state)
 })

@@ -3,44 +3,52 @@
     {
       "name": "Memory Tours",
       "url": "http://memorytours.dk",
-      "logo": "memorytours.png"
+      "logo": "memorytours.png",
+      "slug": "memorytours"
     },
     {
       "name": "Ruby Rejser",
       "url": "http://www.ruby-rejser.dk",
-      "logo": "rubyrejser.png"
+      "logo": "rubyrejser.png",
+      "slug": "rubyrejser"
     },
     {
       "name": "Merlot Tours",
       "url": "http://www.merlottours.dk",
-      "logo": "merlot.png"
+      "logo": "merlot.png",
+      "slug": "merlot"
     },
     {
       "name": "Topas Travel",
       "url": "http://www.topas.dk",
-      "logo": "topas.png"
+      "logo": "topas.png",
+      "slug": "topas"
     },
     {
       "name": "Stigs Cykelrejser",
       "url": "http://www.cykelstig.dk",
       "logo": "cykelstig.png",
+      "slug": "cykelstig",
       "level": "Erfarne"
     },
     {
       "name": "Papuga Cykelrejser",
       "url": "http://www.papugacykelrejser.dk",
-      "logo": "papuga.png"
+      "logo": "papuga.png",
+      "slug": "papugacykelrejser"
     },
     {
       "name": "Dan Frost Cykelrejser",
       "url": "http://dan-frost.dk",
       "logo": "danfrost.png",
+      "slug": "danfrost",
       "level": "Erfarne"
     },
     {
       "name": "Spies Rejser",
       "url": "http://www.spies.dk",
-      "logo": "spies.png"
+      "logo": "spies.png",
+      "slug": "spies"
     },
     {
       "name": "Velo Tours",
@@ -52,73 +60,86 @@
       "name": "Ørslev Rejser",
       "url": "http://www.orslev.dk/Rejser/Cykelrejser%20og%20cykelevents.aspx",
       "logo": "orslev.png",
+      "slug": "orslev",
       "level": "Erfarne",
       "trustpilot": 7.4
     },
     {
       "name": "DANcycling",
       "url": "http://www.dancycling.dk",
-      "logo": "dancycling.png"
+      "logo": "dancycling.png",
+      "slug": "dancycling"
     },
     {
       "name": "Mont Ventoux Cykelrejser",
       "url": "http://montventoux.dk",
-      "logo": "montventoux.png"
+      "logo": "montventoux.png",
+      "slug": "montventoux"
     },
     {
       "name": "PP CyclingTours",
       "url": "http://www.ppcyclingtours.dk",
       "logo": "ppcyclingtours.jpg",
+      "slug": "ppcyclingtours",
       "level": "Erfarne"
     },
     {
       "name": "Tema Rejser",
       "url": "http://www.temarejser.dk",
-      "logo": "temarejser.png"
+      "logo": "temarejser.png",
+      "slug": "temarejser"
     },
     {
       "name": "Sci-Cykelrejser",
       "url": "http://sci-cykelrejser.dk",
-      "logo": "scicykelrejser.png"
+      "logo": "scicykelrejser.png",
+      "slug": "scicykelrejser"
     },
     {
       "name": "Jysk Rejsebureau",
       "url": "http://www.jysk-rejsebureau.dk",
       "logo": "jyskrejse.png",
+      "slug": "jyskrejse",
       "trustpilot": 8.9
     },
     {
       "name": "Bravo Tours",
       "url": "http://www.bravotours.dk",
       "logo": "bravotours.jpg",
+      "slug": "bravotours",
       "trustpilot": 5.9
     },
     {
       "name": "Mountain Adventures",
       "url": "http://www.mountain-adventures.dk",
-      "logo": "mountain-adventures.png"
+      "logo": "mountain-adventures.png",
+      "slug": "mountain-adventures"
     },
     {
       "name": "Profil Rejser",
       "url": "http://www.profil-rejser.dk",
-      "logo": "profilrejser.png"
+      "logo": "profilrejser.png",
+      "slug": "profilrejser"
     },
     {
       "name": "Gislev Rejser",
       "url": "http://www.gislev-rejser.dk",
       "logo": "gislev.png",
+      "slug": "gislev",
       "trustpilot": 8.7
     },
     {
       "name": "MTB Tours",
       "url": "http://mtb-tours.dk",
       "logo": "mtbtours.png",
+      "slug": "mtbtours",
       "trustpilot": 7.4
     },
     {
       "name": "Ghisallo",
       "url": "http://ghisallo.dk/",
-      "logo": "ghisallo.png"
+      "logo": "ghisallo.png",
+      "slug": "ghisallo"
     }
   ]
 }
