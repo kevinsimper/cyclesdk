@@ -9,6 +9,7 @@ import appStore from './reducers'
 import companies from './companies.json'
 import countries from './countries.json'
 
+let filteredCompanies = companies.companies.filter(item => item.status !== 'closed')
 
 export default (req, res, state, cb) => {
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
@@ -19,7 +20,7 @@ export default (req, res, state, cb) => {
     } else if (renderProps) {
       let newState = Object.assign({}, {
         countries: countries.countries,
-        companies: companies.companies
+        companies: filteredCompanies
       }, state)
       const store = createStore(appStore, newState)
       const html = renderToString(

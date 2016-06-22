@@ -45,7 +45,8 @@
     {
       "name": "Velo Tours",
       "url": "http://www.velotours.dk",
-      "logo": "rubyrejser.png"
+      "logo": "rubyrejser.png",
+      "status": "closed"
     },
     {
       "name": "Ørslev Rejser",
