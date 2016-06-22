@@ -19,6 +19,7 @@ export default class Layout extends Component {
     return (
       <html>
         <head>
+          <link rel='stylesheet' href={this.props.assets.main.css}/>
           {title.toComponent()}
           <link rel="shortcut icon" href={'/favicon.png'}/>
           <script dangerouslySetInnerHTML={this.getAnalytics()}></script>
