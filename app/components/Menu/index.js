@@ -17,6 +17,10 @@ export default class Menu extends Component {
           Destinationer
           <span className={styles.Desc}>Oplev nye steder at tage hen</span>
         </a>
+        <a href={'/companies'}>
+          Bureauer
+          <span className={styles.Desc}>Find bureauer at rejse med</span>
+        </a>
         <a href={'/about'}>
           Om cycles
           <span className={styles.Desc}>Kontakt siden her</span>
