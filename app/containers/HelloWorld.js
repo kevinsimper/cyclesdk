@@ -1,21 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import HelloWorld from '../components/HelloWorld'
-import Companies from '../components/Companies'
-import { sortTrustpilot, sortLevel } from '../actions'
+import Countries from '../components/Countries'
 
 export default class HelloWorldContainer extends Component {
   render() {
-    const { companies, sorting, dispatch } = this.props
+    const { countries } = this.props
     return (
       <div>
         <HelloWorld/>
-        <Companies
-          companies={companies}
-          sorting={sorting}
-          onChangeSortingTrustpilot={(sort) => dispatch(sortTrustpilot(sort))}
-          onChangeSortingLevel={(sort) => dispatch(sortLevel(sort))}
-          />
+        <Countries countries={countries}/>
       </div>
     )
   }
@@ -23,8 +17,7 @@ export default class HelloWorldContainer extends Component {
 
 function mapState(state) {
   return {
-    companies: state.sortedCompanies || state.companies,
-    sorting: state.sorting
+    countries: state.countries
   }
 }
 
