@@ -85,6 +85,14 @@ router.get('/companies/:company', (req, res) => {
   output(req, res, state)
 })
 
+router.get('/tours', (req, res) => {
+  let tours = CompaniesData.companies.filter(c => c.tours)
+  let state = {
+    tours
+  }
+  output(req, res, state)
+})
+
 router.get('*', (req, res) => {
   output(req, res, {})
 })

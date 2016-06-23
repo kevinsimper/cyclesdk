@@ -7,6 +7,7 @@ import City from './containers/City'
 import About from './components/About'
 import Company from './containers/Company'
 import Country from './containers/Country'
+import Tours from './containers/Tours'
 
 export default (
   <Route path='/' component={Main}>
@@ -16,5 +17,6 @@ export default (
     <Route path='countries/:country' component={Country}/>
     <Route path='countries/:country/:city' component={City}/>
     <Route path='companies/:company' component={Company}/>
+    <Route path='tours' component={Tours}/>
   </Route>
 )
