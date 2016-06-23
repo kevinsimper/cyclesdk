@@ -29,7 +29,16 @@
       "url": "http://www.cykelstig.dk",
       "logo": "cykelstig.png",
       "slug": "cykelstig",
-      "level": "Erfarne"
+      "level": "Erfarne",
+      "tours": [
+        {
+          "place": "Mallorca",
+          "start": "01/10/16",
+          "end": "09/10/16",
+          "url": "http://cykelstig.dk/",
+          "price": 7000
+        }
+      ]
     },
     {
       "name": "Papuga Cykelrejser",
@@ -42,7 +51,37 @@
       "url": "http://dan-frost.dk",
       "logo": "danfrost.png",
       "slug": "danfrost",
-      "level": "Erfarne"
+      "level": "Erfarne",
+      "tours": [
+        {
+          "place": "Asturias, Spanien",
+          "start": "13/08/16",
+          "end": "20/08/16",
+          "url": "http://dan-frost.dk/rejser/asturias/",
+          "price": 9975
+        },
+        {
+          "place": "Pyrenæerne",
+          "start": "27/08/16",
+          "end": "03/09/16",
+          "url": "http://www.dan-frost.dk/rejser/coast-to-coast-pyrenaeerne/",
+          "price": 9975
+        },
+        {
+          "place": "Pyrenæerne",
+          "start": "04/09/16",
+          "end": "11/09/16",
+          "url": "http://www.dan-frost.dk/rejser/coast-to-coast-pyrenaeerne/",
+          "price": 9975
+        },
+        {
+          "place": "Mont Ventoux",
+          "start": "18/09/16",
+          "end": "25/09/16",
+          "url": "http://dan-frost.dk/rejser/giganten/",
+          "price": 9975
+        }
+      ]
     },
     {
       "name": "Spies Rejser",
