@@ -9,6 +9,10 @@ export default class Menu extends Component {
           Hjem
           <span className={styles.Desc}>Gå til forsiden</span>
         </a>
+        <a href={'/tours'}>
+          Cykelrejser
+          <span className={styles.Desc}>Oversigt over rejser</span>
+        </a>
         <a href={'/countries'}>
           Destinationer
           <span className={styles.Desc}>Oplev nye steder at tage hen</span>

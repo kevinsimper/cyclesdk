@@ -44,7 +44,23 @@
       "name": "Papuga Cykelrejser",
       "url": "http://www.papugacykelrejser.dk",
       "logo": "papuga.png",
-      "slug": "papugacykelrejser"
+      "slug": "papugacykelrejser",
+      "tours": [
+        {
+          "place": "Mallorca",
+          "start": "22/10/16",
+          "end": "26/10/16",
+          "url": "http://www.papugacykelrejser.dk/product/mallorca-2016-efteraar-413/",
+          "price": 4995
+        },
+        {
+          "place": "Azorerne",
+          "start": "29/08/16",
+          "end": "05/09/16",
+          "url": "http://www.papugacykelrejser.dk/product/azorerne-2016-371/",
+          "price": 7995
+        }
+      ]
     },
     {
       "name": "Dan Frost Cykelrejser",
@@ -101,7 +117,16 @@
       "logo": "orslev.png",
       "slug": "orslev",
       "level": "Erfarne",
-      "trustpilot": 7.4
+      "trustpilot": 7.4,
+      "tours": [
+        {
+          "place": "Alpe d'Huez",
+          "start": "04/09/16",
+          "end": "09/09/16",
+          "url": "http://www.orslev.dk/Default.aspx?ID=3072",
+          "price": 5795
+        }
+      ]
     },
     {
       "name": "DANcycling",
