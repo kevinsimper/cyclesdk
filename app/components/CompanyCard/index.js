@@ -20,7 +20,7 @@ export default class Company extends Component {
         </div>
         <div>
           <Button href={company.url}>Besøg</Button>
-          <Button href={`/companies/${company.slug}`}>Vis mere</Button>
+          <Button href={`/cykelrejse-bureau/${company.slug}`}>Vis mere</Button>
         </div>
       </div>
     )

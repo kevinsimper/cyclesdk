@@ -15,7 +15,7 @@ export default class ToursContainer extends Component {
 
 function mapState(state) {
   return {
-    tours: state.tours
+    tours: state.companies
   }
 }
 

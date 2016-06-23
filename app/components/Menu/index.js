@@ -9,19 +9,19 @@ export default class Menu extends Component {
           Hjem
           <span className={styles.Desc}>Gå til forsiden</span>
         </a>
-        <a href={'/tours'}>
+        <a href={'/cykelrejser'}>
           Cykelrejser
           <span className={styles.Desc}>Oversigt over rejser</span>
         </a>
-        <a href={'/countries'}>
+        <a href={'/cykelrejse-lande'}>
           Destinationer
           <span className={styles.Desc}>Oplev nye steder at tage hen</span>
         </a>
-        <a href={'/companies'}>
+        <a href={'/cykelrejse-bureauer'}>
           Bureauer
           <span className={styles.Desc}>Find bureauer at rejse med</span>
         </a>
-        <a href={'/about'}>
+        <a href={'/om-cycles'}>
           Om cycles
           <span className={styles.Desc}>Kontakt siden her</span>
         </a>

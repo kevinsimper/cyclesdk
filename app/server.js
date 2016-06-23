@@ -31,7 +31,7 @@ let router = express.Router()
 router.use(bodyParser.json())
 
 router.use('/api/subscriber', restapi(Subscriber))
-router.get('/countries/:country', (req, res) => {
+router.get('/cykelrejser/:country', (req, res) => {
   const { country } = req.params
   let countries = CountriesData.countries
   let selectedCountry = countries.find(c => {
@@ -50,7 +50,7 @@ router.get('/countries/:country', (req, res) => {
   output(req, res, state)
 })
 
-router.get('/countries/:country/:city', (req, res) => {
+router.get('/cykelrejser/:country/:city', (req, res) => {
   const { country, city } = req.params
   let countries = CountriesData.countries
   let selectedCountry = countries.find(c => {
@@ -76,14 +76,14 @@ router.get('/countries/:country/:city', (req, res) => {
   output(req, res, state)
 })
 
-router.get('/companies', (req, res) => {
+router.get('/cykelrejse-bureauer', (req, res) => {
   let state = {
     companies: CompaniesData.companies
   }
   output(req, res, state)
 })
 
-router.get('/companies/:company', (req, res) => {
+router.get('/cykelrejse-bureau/:company', (req, res) => {
   const { company } = req.params
   let companySelected = CompaniesData.companies.find(c => c.slug === company)
   let state = {
@@ -92,7 +92,7 @@ router.get('/companies/:company', (req, res) => {
   output(req, res, state)
 })
 
-router.get('/tours', (req, res) => {
+router.get('/cykelrejser', (req, res) => {
   let tours = CompaniesData.companies.filter(c => c.tours)
   let state = {
     tours

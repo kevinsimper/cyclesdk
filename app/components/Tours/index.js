@@ -19,18 +19,20 @@ export default class Tours extends Component {
           </thead>
           <tbody>
             {tours.map((company) => {
-              return company.tours.map((tour) => {
-                return (
-                  <tr>
+              if(company.tours && company.tours.length > 0) {
+                return company.tours.map((tour) => {
+                  return (
+                    <tr>
                     <td>{tour.place && tour.place}</td>
                     <td>{company.name}</td>
                     <td>{tour.start && tour.start}</td>
                     <td>{tour.end && tour.end}</td>
                     <td>{tour.price && tour.price}</td>
                     <td><a href={tour.url}>Se rejse</a></td>
-                  </tr>
-                )
-              })
+                    </tr>
+                  )
+                })
+              }
             })}
           </tbody>
         </table>

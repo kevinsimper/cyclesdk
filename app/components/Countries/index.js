@@ -11,7 +11,7 @@ export default class Countries extends Component {
           {countries.map((country, key) => {
             return (
               <div key={key} className={styles.Country}>
-                <a className={styles.Header} href={`/countries/${country.file}`}>
+                <a className={styles.Header} href={`/cykelrejser/${country.file}`}>
                   {country.name}
                 </a>
                 <div className={styles.Cities}>

@@ -13,12 +13,12 @@ import Companies from './containers/Companies'
 export default (
   <Route path='/' component={Main}>
     <IndexRoute component={HelloWorld}/>
-    <Route path='about' component={About}/>
-    <Route path='countries' component={Countries}/>
-    <Route path='countries/:country' component={Country}/>
-    <Route path='countries/:country/:city' component={City}/>
-    <Route path='companies' component={Companies}/>
-    <Route path='companies/:company' component={Company}/>
-    <Route path='tours' component={Tours}/>
+    <Route path='om-cycles' component={About}/>
+    <Route path='cykelrejse-lande' component={Countries}/>
+    <Route path='cykelrejser/:country' component={Country}/>
+    <Route path='cykelrejser/:country/:city' component={City}/>
+    <Route path='cykelrejse-bureauer' component={Companies}/>
+    <Route path='cykelrejse-bureau/:company' component={Company}/>
+    <Route path='cykelrejser' component={Tours}/>
   </Route>
 )
