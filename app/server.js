@@ -76,6 +76,13 @@ router.get('/countries/:country/:city', (req, res) => {
   output(req, res, state)
 })
 
+router.get('/companies', (req, res) => {
+  let state = {
+    companies: CompaniesData.companies
+  }
+  output(req, res, state)
+})
+
 router.get('/companies/:company', (req, res) => {
   const { company } = req.params
   let companySelected = CompaniesData.companies.find(c => c.slug === company)
