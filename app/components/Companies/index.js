@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
-import Company from '../Company'
+import CompanyCard from '../CompanyCard'
 import Select from '../Select'
 
 export default class Companies extends Component {
@@ -44,7 +44,7 @@ export default class Companies extends Component {
         </div>
         <div className={styles.Companies}>
           {companies.map((company, key) => {
-            return <Company key={key} company={company}/>
+            return <CompanyCard key={key} company={company}/>
           })}
         </div>
       </div>
