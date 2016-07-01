@@ -4,10 +4,10 @@ import Tours from '../components/Tours'
 
 export default class ToursContainer extends Component {
   render() {
-    const { tours } = this.props
+    const { tours, countries } = this.props
     return (
       <div>
-        <Tours tours={tours}/>
+        <Tours tours={tours} countries={countries}/>
       </div>
     )
   }
@@ -15,7 +15,8 @@ export default class ToursContainer extends Component {
 
 function mapState(state) {
   return {
-    tours: state.companies
+    tours: state.companies,
+    countries: state.countries
   }
 }
 

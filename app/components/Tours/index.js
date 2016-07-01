@@ -4,7 +4,7 @@ import Button from '../Button'
 
 export default class Tours extends Component {
   render() {
-    const { tours } = this.props
+    const { tours, countries } = this.props
     return (
       <div>
         <h1>Tours</h1>
@@ -21,9 +21,21 @@ export default class Tours extends Component {
             {tours.map((company) => {
               if(company.tours && company.tours.length > 0) {
                 return company.tours.map((tour) => {
+                  let country = countries.find((country) => {
+                    return country.cities.find(city => city.file === tour.place)
+                  })
+                  let city = false
+                  if(country) {
+                    city = country.cities.find(city => city.file === tour.place)
+                  }
                   return (
                     <div className={styles.Trip}>
-                      <div className={styles.Column}>{tour.place && tour.place}</div>
+                      <div className={styles.Column}>
+                        {(city.name) ? 
+                          <a href={`/cykelrejser/${country.file}/${city.file}`}>{city.name}</a>
+                          : tour.place
+                        }
+                      </div>
                       <div className={styles.Column}>{company.name}</div>
                       <div className={styles.Column}>{tour.start && tour.start}</div>
                       <div className={styles.Column}>{tour.end && tour.end}</div>
