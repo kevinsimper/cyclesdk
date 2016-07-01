@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
+import Button from '../Button'
 
 export default class Tours extends Component {
   render() {
@@ -27,7 +28,9 @@ export default class Tours extends Component {
                       <div className={styles.Column}>{tour.start && tour.start}</div>
                       <div className={styles.Column}>{tour.end && tour.end}</div>
                       <div className={styles.Column}>{tour.price && tour.price}</div>
-                      <div className={styles.Column}><a href={tour.url}>Se rejse</a></div>
+                      <div className={styles.Column}>
+                        <Button href={tour.url}>Se rejse</Button>
+                      </div>
                     </div>
                   )
                 })

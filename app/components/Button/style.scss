@@ -6,6 +6,6 @@
   text-decoration: none;
   display: inline-block;
   &:hover {
-    background-color: darken(#1e90ff, 10%)
+    background-color: color(#1e90ff blackness(10%));
   }
 }
