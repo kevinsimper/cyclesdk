@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styles from './style.scss'
 
 export default class Tours extends Component {
   render() {
@@ -6,36 +7,34 @@ export default class Tours extends Component {
     return (
       <div>
         <h1>Tours</h1>
-        <table style={{width: '100%'}}>
-          <thead>
-            <tr>
-              <th>Destination</th>
-              <th>Firma</th>
-              <th>Afrejse</th>
-              <th>Hjemrejse</th>
-              <th>Pris</th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
+        <div className={styles.Table}>
+          <div className={styles.Header}>
+            <div className={styles.Column}>Destination</div>
+            <div className={styles.Column}>Firma</div>
+            <div className={styles.Column}>Afrejse</div>
+            <div className={styles.Column}>Hjemrejse</div>
+            <div className={styles.Column}>Pris</div>
+            <div className={styles.Column}>Link</div>
+          </div>
+          <div className={styles.Content}>
             {tours.map((company) => {
               if(company.tours && company.tours.length > 0) {
                 return company.tours.map((tour) => {
                   return (
-                    <tr>
-                    <td>{tour.place && tour.place}</td>
-                    <td>{company.name}</td>
-                    <td>{tour.start && tour.start}</td>
-                    <td>{tour.end && tour.end}</td>
-                    <td>{tour.price && tour.price}</td>
-                    <td><a href={tour.url}>Se rejse</a></td>
-                    </tr>
+                    <div className={styles.Trip}>
+                      <div className={styles.Column}>{tour.place && tour.place}</div>
+                      <div className={styles.Column}>{company.name}</div>
+                      <div className={styles.Column}>{tour.start && tour.start}</div>
+                      <div className={styles.Column}>{tour.end && tour.end}</div>
+                      <div className={styles.Column}>{tour.price && tour.price}</div>
+                      <div className={styles.Column}><a href={tour.url}>Se rejse</a></div>
+                    </div>
                   )
                 })
               }
             })}
-          </tbody>
-        </table>
+          </div>
+        </div>
       </div>
     )
   }

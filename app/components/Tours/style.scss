@@ -1,0 +1,26 @@
+.Table {
+  width: 100%;
+  th {
+    text-align: left;
+  }
+}
+.Header {
+  display: flex;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  padding: 10px;
+}
+.Content {
+}
+.Trip {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+.Trip:nth-child(2n) {
+  background-color: #ECECEC;
+}
+.Column {
+  width: 16%;
+}
