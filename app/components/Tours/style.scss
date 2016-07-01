@@ -5,11 +5,16 @@
   }
 }
 .Header {
-  display: flex;
   width: 100%;
   background-color: #111;
   color: white;
   padding: 10px;
+  display: none;
+  flex-direction: column;
+  @media(min-width: 800px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .Content {
 }
@@ -17,10 +22,17 @@
   display: flex;
   width: 100%;
   padding: 10px;
+  flex-direction: column;;
+  @media(min-width: 800px) {
+    flex-direction: row;
+  }
 }
 .Trip:nth-child(2n) {
   background-color: #ECECEC;
 }
 .Column {
-  width: 16%;
+  padding: 2px 0;
+  @media(min-width: 800px) {
+    width: 16%;
+  }
 }
