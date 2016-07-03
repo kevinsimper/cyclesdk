@@ -32,7 +32,7 @@
       "level": "Erfarne",
       "tours": [
         {
-          "place": "Mallorca",
+          "place": "mallorca",
           "start": "01/10/16",
           "end": "09/10/16",
           "url": "http://cykelstig.dk/",
@@ -47,7 +47,7 @@
       "slug": "papugacykelrejser",
       "tours": [
         {
-          "place": "Mallorca",
+          "place": "mallorca",
           "start": "22/10/16",
           "end": "26/10/16",
           "url": "http://www.papugacykelrejser.dk/product/mallorca-2016-efteraar-413/",
@@ -127,7 +127,7 @@
       "trustpilot": 7.4,
       "tours": [
         {
-          "place": "Alpe d'Huez",
+          "place": "alpedhuez",
           "start": "04/09/16",
           "end": "09/09/16",
           "url": "http://www.orslev.dk/Default.aspx?ID=3072",
