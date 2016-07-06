@@ -7,6 +7,10 @@
         {
           "name": "Alpe d'Huez",
           "file": "alpedhuez"
+        },
+        {
+          "name": "Korsika",
+          "file": "korsika"
         }
       ]
     },
