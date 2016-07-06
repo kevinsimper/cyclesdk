@@ -1,6 +1,10 @@
-.Links {
-  display: flex;
+.Wrapper {
   background: color(#1e90ff shade(30%));
+}
+.Links {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
   color: white;
   padding: 5px 10px;
   flex-direction: column;

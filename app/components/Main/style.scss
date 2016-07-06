@@ -11,8 +11,11 @@ h1, h2 {
   line-height: 1.3em;
 }
 .wrapper {
-  max-width: 1000px;
   margin: 0 auto;
+}
+.Content {
+  margin: 0 auto;
+  max-width: 1000px;
 }
 * {
   box-sizing: border-box;

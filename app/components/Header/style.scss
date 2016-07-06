@@ -1,5 +1,9 @@
-.Header {
+.Wrapper {
   background-color: #333;
+}
+.Header {
+  max-width: 1000px;
+  margin: 0 auto;
   color: #FFF;
   padding: 20px;
   display: flex;

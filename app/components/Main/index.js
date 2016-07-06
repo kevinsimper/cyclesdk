@@ -12,9 +12,11 @@ export default class Main extends Component {
           defaultTitle={'Alt omkring cykelrejser - Cycles.dk'}
         />
         <Header/>
-        <Content>
+        <div className={styles.Content}>
+          <Content>
           {this.props.children}
-        </Content>
+          </Content>
+        </div>
       </div>
     )
   }
