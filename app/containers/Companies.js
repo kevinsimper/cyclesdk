@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Companies from '../components/Companies'
 import { sortTrustpilot, sortLevel } from '../actions'
+import Helmet from 'react-helmet'
 
 export default class CompaniesContainer extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class CompaniesContainer extends Component {
     return (
       <div>
         <h1>Cykelrejse firmaer</h1>
+        <Helmet title={`De bedste Danske Cykelrejse bureauer listet`}/>
         <Companies
           companies={companies}
           sorting={sorting}

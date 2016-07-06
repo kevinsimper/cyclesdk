@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Countries from '../components/Countries'
+import Helmet from 'react-helmet'
 
 export default class CountriesContainer extends Component {
   render() {
     const { countries } = this.props
     return (
       <div>
-        <h1>Lande</h1>
+        <Helmet title={`Cykelrejser destinationer i Europa - Find de bedste steder`}/>
+        <h1>Cykelrejser destinationer i Europa - Find de bedste steder</h1>
         <div>Jeg har samlet en liste over alle lande hvor du kan finde gode steder at tage hen!</div>
         <Countries countries={countries}/>
       </div>
