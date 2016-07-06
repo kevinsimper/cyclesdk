@@ -44,4 +44,10 @@
 .Logo {
   width: 60px;
   margin-right: 5px;
+  animation: spin 20s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
