@@ -9,6 +9,7 @@ import Company from './containers/Company'
 import Country from './containers/Country'
 import Tours from './containers/Tours'
 import Companies from './containers/Companies'
+import Login from './containers/Login'
 
 export default (
   <Route path='/' component={Main}>
@@ -20,5 +21,6 @@ export default (
     <Route path='cykelrejse-bureauer' component={Companies}/>
     <Route path='cykelrejse-bureau/:company' component={Company}/>
     <Route path='cykelrejser' component={Tours}/>
+    <Route path='login' component={Login}/>
   </Route>
 )
