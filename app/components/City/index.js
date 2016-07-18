@@ -17,7 +17,7 @@ export default class City extends Component {
               height='100%'
               width='100%'
               frameBorder='0'
-              src={`https://www.google.com/maps/embed/v1/search?q=${city.name}&key=AIzaSyAhTARSQYOOO7NNVIV2ckKYBUGPFK5oAYw`}
+              src={`https://www.google.com/maps/embed/v1/search?q=${city.name}&key=AIzaSyCiifGnWvTE4uW7FLPTD78n91Tm6VV80FA`}
               allowFullScreen>
             </iframe>
           </div>
