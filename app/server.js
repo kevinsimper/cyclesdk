@@ -100,6 +100,10 @@ router.get('/cykelrejser', (req, res) => {
   output(req, res, state)
 })
 
+router.get('/admin', (req, res) => {
+  res.send('Admin')
+})
+
 router.get('*', (req, res) => {
   output(req, res, {})
 })
