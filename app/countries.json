@@ -25,6 +25,10 @@
         {
           "name": "Mallorca",
           "file": "mallorca"
+        },
+        {
+          "name": "Andalusien",
+          "file": "andalusien"
         }
       ]
     },
