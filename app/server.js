@@ -9,6 +9,7 @@ import Sequelize from 'sequelize'
 import bodyParser from 'body-parser'
 import restapi from 'sequelize-restapi'
 import Helmet from 'react-helmet'
+import axios from 'axios'
 
 let connectionString = process.env.POSTGRES || 'postgres://localhost:5432/cyclesdk'
 let database = new Sequelize(connectionString, {
@@ -98,6 +99,16 @@ router.get('/cykelrejser', (req, res) => {
     tours
   }
   output(req, res, state)
+})
+
+router.post('/checklogin', (req, res) => {
+  let { accessToken } = req.body
+
+  axios.get(`https://graph.facebook.com/debug_token?input_token=${accessToken}&access_token=${process.env.FACEBOOK_ACCESS_TOKEN}`).then((response) => {
+    res.send(response.data)
+  }).catch(() => {
+    res.send('Error')
+  })
 })
 
 router.get('/admin', (req, res) => {

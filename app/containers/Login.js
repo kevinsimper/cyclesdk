@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Helmet from 'react-helmet'
 import Button from '../components/Button'
+import { post } from 'axios'
 
 export default class LoginContainer extends Component {
   componentDidMount() {
@@ -26,15 +27,20 @@ export default class LoginContainer extends Component {
   }
   statusChangeCallback(res) {
     if (res.status === 'connected') {
-      this.testApi()
+      this.testApi(res)
     } else if (res.status === 'not_authorized') {
       FB.login(this.statusChangeCallback.bind(this), {scope: 'public_profile,email'})
     } else {
       FB.login(this.statusChangeCallback.bind(this), {scope: 'public_profile,email'})
     }
   }
-  testApi() {
-    window.location.href = '/admin'
+  testApi(res) {
+    post('/checklogin', {
+      accessToken: res.authResponse.accessToken
+    }).then((res) => {
+      console.log(res)
+      // window.location.href = '/admin'
+    })
   }
   render() {
     return (
