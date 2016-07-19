@@ -7,7 +7,7 @@ export default class Country extends Component {
     const { content, cities, country } = this.props
     return (
       <div>
-        <div dangerouslySetInnerHTML={{__html: content}} />
+        <div className={styles.Article} dangerouslySetInnerHTML={{__html: content}} />
         <div className={styles.Cities}>
           {cities && cities.map((city, key) => {
             return (
