@@ -6,4 +6,6 @@ cyclesdk:
   environment:
     - NODE_ENV=production
     - VIRTUAL_HOST=www.cycles.dk, cycles.dk
-    - POSTGRES=######
+    - POSTGRES=
+    - FACEBOOK_ACCESS_TOKEN=
+    - COOKIE_SECRET=

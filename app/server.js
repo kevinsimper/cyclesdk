@@ -118,7 +118,8 @@ router.post('/checklogin', (req, res) => {
     } else {
       res.sendStatus(500)
     }
-  }).catch(() => {
+  }).catch((err) => {
+    console.log(err)
     res.send('Error')
   })
 })
