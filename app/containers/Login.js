@@ -38,9 +38,12 @@ export default class LoginContainer extends Component {
     post('/checklogin', {
       accessToken: res.authResponse.accessToken
     }).then((res) => {
-      console.log(res)
-      // window.location.href = '/admin'
-    })
+      if(res.data.status === 'success') {
+        window.location.href = '/admin'
+      } else {
+        alert('Something went wrong!')
+      }
+    }).catch(() => alert('Something went wrong!'))
   }
   render() {
     return (

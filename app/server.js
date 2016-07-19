@@ -113,7 +113,7 @@ router.post('/checklogin', (req, res) => {
       res.cookie('user_id', user_id, { httpOnly: true, signed: true })
       res.cookie('fb_token', accessToken, { httpOnly: true, signed: true })
       res.send({
-        status: 'Success'
+        status: 'success'
       })
     } else {
       res.sendStatus(500)
