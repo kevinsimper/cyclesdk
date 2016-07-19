@@ -3,6 +3,7 @@ import Header from '../Header'
 import Content from '../Content'
 import styles from './style.scss'
 import Helmet from 'react-helmet'
+import Footer from '../Footer'
 
 export default class Main extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class Main extends Component {
           <Content>
           {this.props.children}
           </Content>
+          <Footer/>
         </div>
       </div>
     )
