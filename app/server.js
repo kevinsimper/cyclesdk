@@ -10,6 +10,7 @@ import bodyParser from 'body-parser'
 import restapi from 'sequelize-restapi'
 import Helmet from 'react-helmet'
 import axios from 'axios'
+import cookieParser from 'cookie-parser'
 
 let connectionString = process.env.POSTGRES || 'postgres://localhost:5432/cyclesdk'
 let database = new Sequelize(connectionString, {
@@ -30,6 +31,7 @@ if(!production) {
 
 let router = express.Router()
 router.use(bodyParser.json())
+router.use(cookieParser(process.env.COOKIE_SECRET))
 
 router.use('/api/subscriber', restapi(Subscriber))
 router.get('/cykelrejser/:country', (req, res) => {
@@ -104,8 +106,18 @@ router.get('/cykelrejser', (req, res) => {
 router.post('/checklogin', (req, res) => {
   let { accessToken } = req.body
 
-  axios.get(`https://graph.facebook.com/debug_token?input_token=${accessToken}&access_token=${process.env.FACEBOOK_ACCESS_TOKEN}`).then((response) => {
-    res.send(response.data)
+  let checkToken = `https://graph.facebook.com/debug_token?input_token=${accessToken}&access_token=${process.env.FACEBOOK_ACCESS_TOKEN}`
+  axios.get(checkToken).then((response) => {
+    const { is_valid, user_id, app_id } = response.data.data
+    if(is_valid && app_id === '782369031899919') {
+      res.cookie('user_id', user_id, { httpOnly: true, signed: true })
+      res.cookie('fb_token', accessToken, { httpOnly: true, signed: true })
+      res.send({
+        status: 'Success'
+      })
+    } else {
+      res.sendStatus(500)
+    }
   }).catch(() => {
     res.send('Error')
   })
