@@ -123,7 +123,16 @@ router.post('/checklogin', (req, res) => {
   })
 })
 
-router.get('/admin', (req, res) => {
+let checkAdmin = (req, res, next) => {
+  const { user_id } = req.signedCookies
+  if(user_id === '10155319207723539') {
+    next()
+  } else {
+    res.sendStatus(500)
+  }
+}
+
+router.get('/admin', checkAdmin, (req, res) => {
   res.send('Admin')
 })
 
