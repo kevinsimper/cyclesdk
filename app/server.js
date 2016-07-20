@@ -136,7 +136,11 @@ let checkAdmin = (req, res, next) => {
 }
 
 router.get('/admin', checkAdmin, (req, res) => {
-  output(req, res, {})
+  Company.findAll().then((companies) => {
+    output(req, res, {
+      companies2: companies
+    })
+  })
 })
 
 router.get('*', (req, res) => {
