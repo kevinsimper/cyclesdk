@@ -134,7 +134,7 @@ let checkAdmin = (req, res, next) => {
 }
 
 router.get('/admin', checkAdmin, (req, res) => {
-  res.send('Admin')
+  output(req, res, {})
 })
 
 router.get('*', (req, res) => {

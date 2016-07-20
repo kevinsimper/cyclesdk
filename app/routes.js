@@ -10,6 +10,7 @@ import Country from './containers/Country'
 import Tours from './containers/Tours'
 import Companies from './containers/Companies'
 import Login from './containers/Login'
+import Admin from './containers/Admin'
 
 export default (
   <Route path='/' component={Main}>
@@ -22,5 +23,6 @@ export default (
     <Route path='cykelrejse-bureau/:company' component={Company}/>
     <Route path='cykelrejser' component={Tours}/>
     <Route path='login' component={Login}/>
+    <Route path='admin' component={Admin}/>
   </Route>
 )
