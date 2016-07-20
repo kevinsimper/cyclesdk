@@ -20,7 +20,9 @@ database.authenticate().catch(() => {
   console.log('Could not connect to database!')
 })
 import subscriberModel from './Models/subscriber'
+import companyModel from './Models/company'
 let Subscriber = database.define(subscriberModel.name, subscriberModel.columns)
+let Company = database.define(companyModel.name, companyModel.columns)
 
 let production = process.env.NODE_ENV === 'production'
 if(!production) {
