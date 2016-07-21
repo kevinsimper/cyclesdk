@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styles from './style.scss'
 
 export default class Table extends Component {
   render() {
@@ -6,7 +7,7 @@ export default class Table extends Component {
 
     let columns = Object.keys(data[0])
     return (
-      <table>
+      <table className={styles.Table}>
         <thead>
           <tr>
             {columns.map((col) => <th>{col}</th>)}
