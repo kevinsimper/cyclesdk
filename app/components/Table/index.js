@@ -5,6 +5,12 @@ export default class Table extends Component {
   render() {
     const { data } = this.props
 
+    if(data.length === 0) {
+      return (
+        <div>No data to show in table.</div>
+      )
+    }
+
     let columns = Object.keys(data[0])
     return (
       <table className={styles.Table}>
