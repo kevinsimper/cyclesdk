@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Table from '../components/Table'
 
 export default class Admin extends Component {
   render() {
     return (
       <div>
         <h1>Admin</h1>
-        <pre>
-          {JSON.stringify(this.props.companies, null, 2)}
-        </pre>
+        <Table data={this.props.companies}/>
       </div>
     )
   }
