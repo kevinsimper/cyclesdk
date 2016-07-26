@@ -14,6 +14,15 @@ export default {
     },
     slug: {
       type: Sequelize.STRING
+    },
+    level: {
+      type: Sequelize.STRING
+    },
+    status: {
+      type: Sequelize.INTEGER
+    },
+    trustpilot: {
+      type: Sequelize.FLOAT
     }
   }
 }
