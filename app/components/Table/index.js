@@ -23,7 +23,10 @@ export default class Table extends Component {
           {data.map((item) => {
             return (
               <tr>
-                {columns.map((col) => <td>{item[col]}</td>)}
+                {columns.map((col) => {
+                  let string = item[col] == null ? '' : item[col].toString()
+                  return <td>{string}</td>
+                })}
               </tr>
             )
           })}
