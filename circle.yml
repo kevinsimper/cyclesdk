@@ -8,10 +8,12 @@ machine:
 dependencies:
   cache_directories:
     - "~/docker"
+    - "node_modules"
   override:
     - docker pull node:6.3
     - mkdir -p ~/docker
     - if [[ -e ~/docker/cyclesdk_web.tar ]]; then docker load -i ~/docker/cyclesdk_web.tar; fi
+    - docker run -it --workdir /app -v $(pwd):/app node:6.3 npm install
     - docker-compose build
     - docker save "cyclesdk_web" > ~/docker/cyclesdk_web.tar
 test:
