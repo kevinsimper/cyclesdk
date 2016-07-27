@@ -7,7 +7,8 @@ let app = express()
 let production = process.env.NODE_ENV === 'production'
 if(production) {
   app.use(forceDomain({
-    hostname: 'www.cycles.dk'
+    hostname: 'www.cycles.dk',
+    protocol: 'https'
   }))
 }
 if(!production) {
