@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "webpack -w --config webpack.server.config.js",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "deploy": "docker-compose build && docker tag -f cyclesdk_web kevinsimper/cyclesdk && docker push kevinsimper/cyclesdk",
+    "deploy": "docker tag -f cyclesdk_web kevinsimper/cyclesdk && docker push kevinsimper/cyclesdk",
     "compile-client": "NODE_ENV=production webpack --progress --config webpack.client.config.js",
     "compile-server": "NODE_ENV=production webpack --progress --config webpack.server.config.js",
     "build": "npm run compile-client && npm run compile-server"
