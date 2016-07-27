@@ -1,16 +1,9 @@
 "use strict"
 let express = require('express')
 let webpack = require('webpack')
-let forceDomain = require('forcedomain')
 let app = express()
 
 let production = process.env.NODE_ENV === 'production'
-if(production) {
-  app.use(forceDomain({
-    hostname: 'www.cycles.dk',
-    protocol: 'https'
-  }))
-}
 if(!production) {
   let config = require('./webpack.client.config')
   let compiler = webpack(config)
