@@ -11,6 +11,9 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  &:hover {
+    color: white;
+  }
   @media(min-width: 700px) {
     flex-direction: row;
   }
