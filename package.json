@@ -49,6 +49,7 @@
     "compression": "^1.6.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.13.4",
+    "forcedomain": "^0.7.0",
     "lodash": "^4.5.1",
     "material-ui": "^0.14.4",
     "pg": "^4.5.5",
