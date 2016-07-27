@@ -16,6 +16,9 @@ h1, h2 {
 .Content {
   margin: 0 auto;
   max-width: 1000px;
+  &.Admin {
+    max-width: none;
+  }
 }
 * {
   box-sizing: border-box;
