@@ -4,6 +4,15 @@ let webpack = require('webpack')
 let app = express()
 
 let production = process.env.NODE_ENV === 'production'
+if(production) {
+  app.use(function (req, res, next) {
+    if (req.headers.host.slice(0, 4) === 'www.') {
+      var newHost = req.headers.host.slice(4)
+      return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl)
+    }
+    next()
+  })
+}
 if(!production) {
   let config = require('./webpack.client.config')
   let compiler = webpack(config)
