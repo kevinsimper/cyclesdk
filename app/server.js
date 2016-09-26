@@ -35,8 +35,17 @@ let router = express.Router()
 router.use(bodyParser.json())
 router.use(cookieParser(process.env.COOKIE_SECRET))
 
-router.use('/api/subscriber', restapi(Subscriber))
-router.use('/api/company', restapi(Company))
+let checkAdmin = (req, res, next) => {
+  const { user_id } = req.signedCookies
+  if(user_id === '10155319207723539') {
+    next()
+  } else {
+    res.sendStatus(500)
+  }
+}
+
+router.use('/api/subscriber', checkAdmin, restapi(Subscriber))
+router.use('/api/company', checkAdmin, restapi(Company))
 router.get('/cykelrejser/:country', (req, res) => {
   const { country } = req.params
   let countries = CountriesData.countries
@@ -126,15 +135,6 @@ router.post('/checklogin', (req, res) => {
     res.send('Error')
   })
 })
-
-let checkAdmin = (req, res, next) => {
-  const { user_id } = req.signedCookies
-  if(user_id === '10155319207723539') {
-    next()
-  } else {
-    res.sendStatus(500)
-  }
-}
 
 router.get('/admin', checkAdmin, (req, res) => {
   Company.findAll().then((companies) => {
