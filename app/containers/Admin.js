@@ -7,7 +7,7 @@ class Admin extends Component {
     return (
       <div>
         <h1>Admin</h1>
-        <a href="#">Create Company</a>
+        <a href="/admin/company/create">Create Company</a>
         <Table data={this.props.companies}/>
       </div>
     )

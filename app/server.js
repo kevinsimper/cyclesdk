@@ -143,6 +143,10 @@ router.get('/admin', checkAdmin, (req, res) => {
   })
 })
 
+router.get('/admin/company/create', checkAdmin, (req, res) => {
+  output(req, res)
+})
+
 router.get('*', (req, res) => {
   output(req, res, {})
 })

@@ -11,6 +11,7 @@ import Tours from './containers/Tours'
 import Companies from './containers/Companies'
 import Login from './containers/Login'
 import Admin from './containers/Admin'
+import AdminCompanyCreate from './containers/AdminCompanyCreate'
 
 export default (
   <Route path='/' component={Main}>
@@ -24,5 +25,6 @@ export default (
     <Route path='cykelrejser' component={Tours}/>
     <Route path='login' component={Login}/>
     <Route path='admin' component={Admin}/>
+    <Route path='admin/company/create' component={AdminCompanyCreate}/>
   </Route>
 )
