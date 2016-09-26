@@ -12,13 +12,21 @@ export default class CompanyCreate extends Component {
       name: e.target.value
     })
   }
+  onClickCreate() {
+    console.log('submit', this.state.name)
+  }
   render() {
     return (
       <div>
         <h1>Create new Company</h1>
         <div>
-          <label htmlFor="name">Name</label>
-          <input type="text" name='name' value={this.state.name} onChange={this.onChangeName.bind(this)}/>
+          <div>
+            <label htmlFor="name">Name</label>
+          </div>
+          <input type="text" id='name' value={this.state.name} onChange={this.onChangeName.bind(this)}/>
+        </div>
+        <div>
+          <button onClick={this.onClickCreate.bind(this)}>Create company</button>
         </div>
       </div>
     )
