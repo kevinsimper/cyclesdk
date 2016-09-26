@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-refetch'
 
-export default class CompanyCreate extends Component {
+class CompanyCreate extends Component {
   constructor() {
     super()
     this.state = {
@@ -14,6 +15,7 @@ export default class CompanyCreate extends Component {
   }
   onClickCreate() {
     console.log('submit', this.state.name)
+    this.props.postCompany({name: this.state.name})
   }
   render() {
     return (
@@ -32,3 +34,13 @@ export default class CompanyCreate extends Component {
     )
   }
 }
+
+export default connect(() => ({
+  postCompany: company => ({
+    postCompanyResponse: {
+      url: `/api/company`,
+      method: 'POST',
+      body: JSON.stringify(company)
+    }
+  })
+}))(CompanyCreate)
