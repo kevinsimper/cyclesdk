@@ -4,7 +4,7 @@ import Companies from '../components/Companies'
 import { sortTrustpilot, sortLevel } from '../actions'
 import Helmet from 'react-helmet'
 
-export default class CompaniesContainer extends Component {
+class CompaniesContainer extends Component {
   render() {
     const { companies, sorting, dispatch } = this.props
     return (

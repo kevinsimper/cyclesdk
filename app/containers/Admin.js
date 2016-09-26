@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Table from '../components/Table'
 
-export default class Admin extends Component {
+class Admin extends Component {
   render() {
     return (
       <div>
         <h1>Admin</h1>
+        <a href="#">Create Company</a>
         <Table data={this.props.companies}/>
       </div>
     )

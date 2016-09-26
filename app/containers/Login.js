@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Button from '../components/Button'
 import { post } from 'axios'
 
-export default class LoginContainer extends Component {
+class LoginContainer extends Component {
   componentDidMount() {
     window.fbAsyncInit = function() {
       FB.init({
