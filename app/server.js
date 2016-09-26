@@ -36,6 +36,7 @@ router.use(bodyParser.json())
 router.use(cookieParser(process.env.COOKIE_SECRET))
 
 router.use('/api/subscriber', restapi(Subscriber))
+router.use('/api/company', restapi(Company))
 router.get('/cykelrejser/:country', (req, res) => {
   const { country } = req.params
   let countries = CountriesData.countries
