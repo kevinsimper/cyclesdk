@@ -1,6 +1,17 @@
-web:
-  build: .
-  volumes:
-   - ".:/app"
-  ports:
-   - "9000:9000"
+version: '2'
+services:
+  web:
+    build: .
+    volumes:
+     - ".:/app"
+    ports:
+     - "9000:9000"
+    environment:
+     - FACEBOOK_ACCESS_TOKEN=819514644852024|6d944fa1919cd0a2bd5881dc42d4b142
+     - COOKIE_SECRET=secretme
+  db:
+    image: postgres:9.5
+    ports:
+     - "5432:5432"
+    environment:
+     - POSTGRES_PASSWORD=password

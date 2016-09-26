@@ -12,7 +12,7 @@ import Helmet from 'react-helmet'
 import axios from 'axios'
 import cookieParser from 'cookie-parser'
 
-let connectionString = process.env.POSTGRES || 'postgres://localhost:5432/cyclesdk'
+let connectionString = process.env.POSTGRES || 'postgres://postgres:password@db:5432/postgres'
 let database = new Sequelize(connectionString, {
   native: true
 })
