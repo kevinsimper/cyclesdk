@@ -5,7 +5,8 @@ class CompanyCreate extends Component {
   constructor() {
     super()
     this.state = {
-      name: ''
+      name: '',
+      url: ''
     }
   }
   onChangeName(e) {
@@ -13,9 +14,16 @@ class CompanyCreate extends Component {
       name: e.target.value
     })
   }
+  onChangeUrl(e) {
+    this.setState({
+      url: e.target.value
+    })
+  }
   onClickCreate() {
-    console.log('submit', this.state.name)
-    this.props.postCompany({name: this.state.name})
+    this.props.postCompany({
+      name: this.state.name,
+      url: this.state.url
+    })
   }
   render() {
     return (
@@ -26,6 +34,12 @@ class CompanyCreate extends Component {
             <label htmlFor="name">Name</label>
           </div>
           <input type="text" id='name' value={this.state.name} onChange={this.onChangeName.bind(this)}/>
+        </div>
+        <div>
+          <div>
+            <label htmlFor="url">Url</label>
+          </div>
+          <input type="text" id='url' value={this.state.url} onChange={this.onChangeUrl.bind(this)}/>
         </div>
         <div>
           <button onClick={this.onClickCreate.bind(this)}>Create company</button>
