@@ -35,4 +35,4 @@ node_modules
 dist
 public/build
 data
-docker-cloud.yml
+docker-compose-prod.yml

@@ -1,0 +1,10 @@
+web:
+  build: .
+  restart: always
+  ports:
+    - "9000:9000"
+  environment:
+    - NODE_ENV=production
+    - POSTGRES=
+    - FACEBOOK_ACCESS_TOKEN=
+    - COOKIE_SECRET=
