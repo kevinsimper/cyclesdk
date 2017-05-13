@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Countries from '../components/Countries'
 import Helmet from 'react-helmet'
 
-export default class CountriesContainer extends Component {
+class CountriesContainer extends Component {
   render() {
     const { countries } = this.props
     return (

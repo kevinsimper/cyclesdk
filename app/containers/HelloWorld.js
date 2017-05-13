@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import HelloWorld from '../components/HelloWorld'
 import Countries from '../components/Countries'
 
-export default class HelloWorldContainer extends Component {
+class HelloWorldContainer extends Component {
   render() {
     const { countries } = this.props
     return (
